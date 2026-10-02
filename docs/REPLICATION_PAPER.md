@@ -5,7 +5,7 @@ prompt, expected value and MCQ key exactly as released, including duplicates and
 disagree with their prompt. Corrections belong to a later benchmark version (`validated` mode); nothing
 in this procedure uses them.
 
-Start with Llama (`llama31_8b_instruct`); repeat with `mistral_7b_instruct_v01` by swapping the key.
+The commands use Llama (`llama31_8b_instruct`); for another model in `configs/models.json`, swap the key.
 
 ## What the paper did, and how each step is reproduced
 
@@ -31,9 +31,9 @@ Hopper commands start, every login, with:
 cd ~/CSEPROMPTS && source hopper/env.sh && git pull
 ```
 
-### Step 1. Generate (Hopper, GPU) — already done for Llama and Mistral
+### Step 1. Generate (Hopper, GPU) — already done for Llama
 
-Done on 2026-09-29: job 1395330 (Llama greedy) and job 1395319 (Mistral greedy). The outputs are
+Done on 2026-09-29: job 1395330 (Llama greedy). The outputs are
 in `/scratch/<netid>/cseprompts/results/generations/<model>/greedy/` and on the Mac under
 `results/generations/`. To redo it from scratch (not needed):
 
