@@ -1,7 +1,11 @@
 # Manual code-cleaning guidelines
 
-*Version 1.0, fixed 2026-09-29 before any model output was cleaned. If a rule changes, bump the version,
-note the date, and re-check files cleaned under the old rule.*
+*Version 1.1 (2026-10-02). Version 1.0 was fixed on 2026-09-29, before any model output was cleaned. If a
+rule changes, bump the version, note the date, and re-check files cleaned under the old rule.*
+
+*Changes in 1.1: rule 4 now says to keep the **first** solution when a response gives alternatives. This is
+the rule actually applied when the Llama-3.1-8B greedy run was cleaned (2026-10-02); 1.0 said to prefer the
+solution the model presents as final.*
 
 The CSEPrompts 2.0 paper says the model responses "are manually cleaned to isolate the code" and then
 tested. The paper gives no further rules, so these are ours. They are designed to:
@@ -49,8 +53,7 @@ still TODO.
      including the variable assignments at the top.
 4. **Several code blocks:**
    - If they are parts of one solution (helper + main function), keep them all, in order.
-   - If they are **alternative** solutions, keep the one the model presents as its final answer (e.g.
-     "Here's the corrected/improved version"); if it does not say, keep the **first complete** one.
+   - If they are **alternative** solutions, keep the **first** solution and delete the others.
    - A block that only demonstrates or tests the solution follows rule 3.
 5. **Truncated responses** (the file ends mid-code because the length limit was hit): clean what is
    there; do not complete it.
