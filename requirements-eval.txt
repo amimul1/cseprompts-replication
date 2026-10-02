@@ -1,0 +1,7 @@
+# Libraries that some CSEPrompts tasks require (the CS50 tasks use emoji/validators/inflect;
+# several CodingSites tasks are NumPy exercises). Installed wherever candidates are executed.
+# numpy is not pinned: on Hopper vLLM pins its own numpy; the version used is recorded in every result.
+emoji==2.16.0
+validators==0.35.0
+inflect==7.5.0
+numpy

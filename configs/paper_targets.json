@@ -1,0 +1,19 @@
+{
+  "_about": "CSEPrompts 2.0 (Raihan et al., JIIS 2025) numbers to compare against. Only GPT-4o's coding scores are stated as numbers in the text (Sec. 5.1.3); the others are read off Fig. 3 (+-2 points; their means agree with Table 4) and Fig. 4. Fig. 3's 'CSEPrompts - MOOCs' bar is taken to be the repo's CodingSites split (it is the easier one, as the text says CodingSites is) and 'CSEPrompts - Academic' the Academic split; to be confirmed with the author. The paper's pass@1 is 'passes all test cases on its first attempt', graded from manually cleaned code.",
+  "rows": {
+    "GPT-4o":      {"codingsites": 93.2, "academic": 83.2, "mcq": 76, "source": "text + Fig. 3/4"},
+    "GPT-3.5":     {"codingsites": 83,   "academic": 71,   "mcq": 54, "source": "Fig. 3/4 (approx.)"},
+    "MagiCoder":   {"codingsites": 84,   "academic": 63,   "mcq": 17, "source": "Fig. 3/4 (approx.)"},
+    "WizardCoder": {"codingsites": 78,   "academic": 69,   "mcq": 8,  "source": "Fig. 3/4 (approx.)"},
+    "CodeLLaMA":   {"codingsites": 76,   "academic": 55,   "mcq": 10, "source": "Fig. 3/4 (approx.)"},
+    "LLaMA3":      {"codingsites": 40,   "academic": 30,   "mcq": 52, "source": "Fig. 3/4 (approx.)"},
+    "StarCoder":   {"codingsites": 45,   "academic": 34,   "mcq": 6,  "source": "Fig. 3/4 (approx.)"},
+    "Mistral":     {"codingsites": 44,   "academic": 24,   "mcq": 36, "source": "Fig. 3/4 (approx.)"}
+  },
+  "model_to_row": {
+    "llama31_8b_instruct": "LLaMA3",
+    "llama31_8b_base": "LLaMA3",
+    "mistral_7b_instruct_v01": "Mistral",
+    "mistral_7b_base_v01": "Mistral"
+  }
+}

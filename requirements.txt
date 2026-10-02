@@ -1,0 +1,3 @@
+# Local development (Mac): tests, harness, evaluation of small runs
+pytest>=8
+-r requirements-eval.txt

@@ -1,0 +1,5 @@
+# Hopper GPU environment (Python 3.12 venv, see hopper/setup_env.sh)
+vllm==0.30.0          # pulls in a matching torch build
+huggingface_hub[cli]
+pytest>=8
+-r requirements-eval.txt

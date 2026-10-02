@@ -1,0 +1,48 @@
+{
+  "model_key": "llama31_8b_instruct",
+  "run": "greedy",
+  "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "paper_row": "LLaMA3",
+  "track": "auto (manual not available yet)",
+  "warnings": [
+    "No manual-track evaluation yet (step 4 of docs/REPLICATION_PAPER.md).",
+    "No MCQ score yet (step 5)."
+  ],
+  "coding": {
+    "codingsites": {
+      "pass@1": 43.22033898305085,
+      "ci95": [
+        34.74576271186441,
+        52.54237288135594
+      ],
+      "n_tasks": 118,
+      "labels_pct": {
+        "NO_CODE": 0.0,
+        "NOT_EXECUTED": 12.711864406779661,
+        "ALL_FAILED": 16.949152542372882,
+        "PARTIAL": 27.11864406779661,
+        "ALL_PASSED": 43.220338983050844
+      },
+      "paper": 40
+    },
+    "academic": {
+      "pass@1": 37.0,
+      "ci95": [
+        28.000000000000004,
+        46.0
+      ],
+      "n_tasks": 100,
+      "labels_pct": {
+        "NO_CODE": 0.0,
+        "NOT_EXECUTED": 8.0,
+        "ALL_FAILED": 26.0,
+        "PARTIAL": 29.0,
+        "ALL_PASSED": 37.0
+      },
+      "paper": 30
+    }
+  },
+  "mcq": null,
+  "manual_vs_auto": null
+}

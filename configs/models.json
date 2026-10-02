@@ -1,0 +1,45 @@
+{
+  "_about": "Model registry. Each entry maps a row of Table 3 in Raihan et al. (JIIS 2025) to an exact Hugging Face repo and a pinned commit (revision), so every run uses byte-identical weights, tokenizer and chat template. The paper gives only name, size and 'version', not HF ids or base-vs-instruct. Choices and reasons below; confirm with Nishat. 'primary' = the replication run; 'sensitivity' = alternative reading of the paper, run to see which reading reproduces the paper's numbers. Revisions pinned 2026-09-29 from the Hugging Face API.",
+  "models": {
+    "llama31_8b_instruct": {
+      "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "paper_row": "Llama-3 | Open | 8B | Version 3.1 | (Dubey et al., 2024)",
+      "variant": "instruct",
+      "role": "primary",
+      "prompt_mode": "auto",
+      "gated": "manual: request access to Llama 3.1 on huggingface.co with your account, then `hf auth login` on Hopper",
+      "why": "'Version 3.1' plus the Dubey et al. (2024) citation, which is the Llama 3.1 ('Llama 3 Herd') paper. Instruct, not base, because the paper's prompt is a chat prompt with a system part ('You are a helpful AI assistant...'). The paper calls Llama/Mistral 'base models', but its v1 README also labels GPT-3.5 'Base', so there 'base' means general-purpose (not code-tuned), not pretrained-only."
+    },
+    "mistral_7b_instruct_v01": {
+      "hf_id": "mistralai/Mistral-7B-Instruct-v0.1",
+      "revision": "ec5deb64f2c6e6fa90c1abf74a91d5c93a9669ca",
+      "paper_row": "Mistral | Open | 7B | Version 0.1 | (Jiang et al., 2023)",
+      "variant": "instruct",
+      "role": "primary",
+      "prompt_mode": "auto",
+      "gated": "no",
+      "why": "'Version 0.1' plus the Mistral 7B paper (Jiang et al., 2023). Instruct for the same reason as Llama. The chat template at this revision (updated 2025-07-24) accepts a system message by prepending it to the first user turn; earlier template versions rejected system messages."
+    },
+    "llama31_8b_base": {
+      "hf_id": "meta-llama/Llama-3.1-8B",
+      "revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+      "paper_row": "Llama-3 | Open | 8B | Version 3.1 (alternative reading: pretrained base model)",
+      "variant": "base",
+      "role": "sensitivity",
+      "prompt_mode": "plain",
+      "gated": "manual (same Llama 3.1 access as the instruct model)",
+      "why": "Sensitivity check for the base-vs-instruct ambiguity. Base models get the paper's three prompt parts as plain text."
+    },
+    "mistral_7b_base_v01": {
+      "hf_id": "mistralai/Mistral-7B-v0.1",
+      "revision": "27d67f1b5f57dc0953326b2601d68371d40ea8da",
+      "paper_row": "Mistral | Open | 7B | Version 0.1 (alternative reading: pretrained base model)",
+      "variant": "base",
+      "role": "sensitivity",
+      "prompt_mode": "plain",
+      "gated": "no",
+      "why": "Sensitivity check for the base-vs-instruct ambiguity (no chat template; plain-text prompt)."
+    }
+  }
+}

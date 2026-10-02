@@ -1,0 +1,82 @@
+{
+  "model_key": "llama31_8b_instruct",
+  "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "registry_entry": {
+    "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "paper_row": "Llama-3 | Open | 8B | Version 3.1 | (Dubey et al., 2024)",
+    "variant": "instruct",
+    "role": "primary",
+    "prompt_mode": "auto",
+    "gated": "manual: request access to Llama 3.1 on huggingface.co with your account, then `hf auth login` on Hopper",
+    "why": "'Version 3.1' plus the Dubey et al. (2024) citation, which is the Llama 3.1 ('Llama 3 Herd') paper. Instruct, not base, because the paper's prompt is a chat prompt with a system part ('You are a helpful AI assistant...'). The paper calls Llama/Mistral 'base models', but its v1 README also labels GPT-3.5 'Base', so there 'base' means general-purpose (not code-tuned), not pretrained-only."
+  },
+  "protocol_name": "greedy",
+  "protocol": {
+    "n": 1,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 2048,
+    "seed": 1234,
+    "purpose": "Primary, paper-comparable. The paper defines pass@1 as passing all tests 'on its first attempt'; greedy decoding is the deterministic version of one attempt, and is how the EvalPlus leaderboard reports pass@1. This run also feeds the manual code-cleaning track."
+  },
+  "sampling_params": "SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, watermarking=True, top_p=1.0, top_k=0, min_p=0.0, seed=1234, stop=[], stop_token_ids=[], bad_words=[], thinking_token_budget=None, include_stop_str_in_output=False, ignore_eos=False, max_tokens=2048, min_tokens=0, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, structured_outputs=None, extra_args=None)",
+  "prompt_mode_requested": "auto",
+  "prompt_modes_used": {
+    "chat-system": 319
+  },
+  "splits": [
+    "codingsites",
+    "academic",
+    "mcq"
+  ],
+  "limit": null,
+  "n_prompts": {
+    "codingsites": 118,
+    "academic": 101,
+    "mcq": 100
+  },
+  "n_samples_total": 319,
+  "finish_reasons": {
+    "stop": 318,
+    "length": 1
+  },
+  "backend": "vllm",
+  "engine": {
+    "tp": 1,
+    "max_model_len": 4096,
+    "gpu_mem": 0.85
+  },
+  "seconds": 379.3,
+  "provenance": {
+    "timestamp": "2026-09-29T23:34:38-0400",
+    "git_commit": null,
+    "git_dirty": null,
+    "python": "3.12.1",
+    "packages": {
+      "vllm": "0.30.0",
+      "torch": "2.13.0",
+      "transformers": "5.17.0",
+      "huggingface_hub": "1.33.0",
+      "pytest": "9.1.1",
+      "numpy": "2.3.5",
+      "emoji": "2.16.0",
+      "validators": "0.35.0",
+      "inflect": "7.5.0"
+    },
+    "host": "gpu021.orc.gmu.edu",
+    "platform": "Linux-4.18.0-553.137.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "slurm": {
+      "SLURM_JOB_ID": "1395330",
+      "SLURM_JOB_PARTITION": "gpuq",
+      "SLURM_JOB_GPUS": "12",
+      "SLURM_JOB_NODELIST": "gpu021"
+    },
+    "gpu": {
+      "nvidia_smi": [
+        "NVIDIA A100-SXM4-80GB, 81920 MiB, 595.71.05"
+      ]
+    }
+  }
+}

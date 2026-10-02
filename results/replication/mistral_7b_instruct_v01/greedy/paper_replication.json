@@ -1,0 +1,48 @@
+{
+  "model_key": "mistral_7b_instruct_v01",
+  "run": "greedy",
+  "hf_id": "mistralai/Mistral-7B-Instruct-v0.1",
+  "revision": "ec5deb64f2c6e6fa90c1abf74a91d5c93a9669ca",
+  "paper_row": "Mistral",
+  "track": "auto (manual not available yet)",
+  "warnings": [
+    "No manual-track evaluation yet (step 4 of docs/REPLICATION_PAPER.md).",
+    "No MCQ score yet (step 5)."
+  ],
+  "coding": {
+    "codingsites": {
+      "pass@1": 41.52542372881356,
+      "ci95": [
+        32.20338983050847,
+        50.847457627118644
+      ],
+      "n_tasks": 118,
+      "labels_pct": {
+        "NO_CODE": 0.0,
+        "NOT_EXECUTED": 16.10169491525424,
+        "ALL_FAILED": 18.64406779661017,
+        "PARTIAL": 23.728813559322035,
+        "ALL_PASSED": 41.52542372881356
+      },
+      "paper": 44
+    },
+    "academic": {
+      "pass@1": 25.0,
+      "ci95": [
+        17.0,
+        34.0
+      ],
+      "n_tasks": 100,
+      "labels_pct": {
+        "NO_CODE": 0.0,
+        "NOT_EXECUTED": 12.0,
+        "ALL_FAILED": 27.0,
+        "PARTIAL": 36.0,
+        "ALL_PASSED": 25.0
+      },
+      "paper": 24
+    }
+  },
+  "mcq": null,
+  "manual_vs_auto": null
+}

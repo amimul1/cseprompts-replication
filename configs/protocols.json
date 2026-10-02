@@ -1,0 +1,21 @@
+{
+  "_about": "Decoding protocols, fixed 2026-09-29 before any replication results were seen. The paper does not report decoding settings. We run two standard protocols and report both. Everything not listed uses vLLM 0.30's neutral SamplingParams defaults, recorded in each run_meta.json: no top-k, no min-p, repetition/presence/frequency penalties off, and no stop strings besides the model's own end-of-sequence token.",
+  "protocols": {
+    "greedy": {
+      "n": 1,
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 2048,
+      "seed": 1234,
+      "purpose": "Primary, paper-comparable. The paper defines pass@1 as passing all tests 'on its first attempt'; greedy decoding is the deterministic version of one attempt, and is how the EvalPlus leaderboard reports pass@1. This run also feeds the manual code-cleaning track."
+    },
+    "sampled": {
+      "n": 20,
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "max_tokens": 2048,
+      "seed": 1234,
+      "purpose": "Unbiased pass@1 estimate with the estimator the paper cites (Chen et al., 2021; paper Eq. 1), using the standard pass@1 settings from the Codex paper and bigcode-evaluation-harness (T=0.2, top_p=0.95). Also measures how much a prompt's success depends on luck (StudentEval's point about nondeterminism)."
+    }
+  }
+}
