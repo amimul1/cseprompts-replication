@@ -93,33 +93,127 @@ def options(prompt: str) -> list[str]:
     return blocks
 
 
-_ANSWER = re.compile(r"(?i)(?:correct|final)?\s*(?:answer|option)\s*(?:is|would be|will be)?\s*[:\-]?\s*(.+)")
+READER_VERSION = "2.0"  # rules: docs/MANUAL_CLEANING.md, "MCQ answers"
+
+# Statements in which a response commits to an answer. The LAST one in the response counts.
+_STATEMENTS = [
+    re.compile(r"(?i)\b(?:correct|right|final)\s+(?:answer|option|value|choice|output)s?\b"),
+    re.compile(r"(?i)\bthe output of (?:the|this) (?:line of )?(?:code|python code)\b"),
+]
+_RESOLVES = re.compile(r"(?i)\bresolves to (True|False)\b")
+_QUOTED_CORRECT = re.compile(r'(?i)"([^"\n]+)" is (?:the )?correct')
+_LIST_ITEM = re.compile(r"^\s*(?:[-*\u2022]|\d+[.)])\s+")
+_OPTION_REF = re.compile(r"(?i)\boption\s+(\d+)\b")
+
+
+def _rnorm(s: str) -> str:
+    """Normalisation used to find option text inside a response (applied to options and response alike)."""
+    lines = [_LIST_ITEM.sub("", ln) for ln in s.replace("\u00a0", " ").split("\n")]
+    t = " ".join(lines).replace("`", "").replace(";", " ").replace(",", " ")
+    t = re.sub(r"\band\b", " ", t.lower())
+    return " ".join(t.split()).strip().rstrip(".:").strip()
+
+
+def _statement_blocks(response: str, opts: list[str]) -> list[dict]:
+    """Every answer statement, in order: {pos, marker, inline, items} (items = the answer's list items)."""
+    option_names = {_rnorm(o) for o in opts}
+    out = []
+    for rx in _STATEMENTS:
+        for m in rx.finditer(response):
+            line_end = response.find("\n", m.end())
+            line_end = len(response) if line_end < 0 else line_end
+            rest = response[m.end():line_end]
+            inline = ":" not in rest
+            if inline:  # "The correct options are 5, 6, and 8." / "the correct answer is option 4."
+                first = re.sub(r"(?i)^.*?\b(?:is|are|would be|will be)\b", "", rest, count=1)
+            else:
+                first = rest.split(":", 1)[1]
+            block = [first.strip()] if first.strip() else []
+            if not inline:
+                for p in re.split(r"\n\s*\n", response[line_end:]):
+                    if not p.strip():
+                        continue
+                    if not block or _LIST_ITEM.match(p) or _rnorm(p) in option_names:
+                        block.append(p.strip())
+                    else:
+                        break
+            out.append({"pos": m.start(), "marker": m.group(0), "inline": inline, "items": _split_items(block)})
+    out += [{"pos": m.start(), "marker": "resolves to", "inline": False, "items": [m.group(1)]}
+            for m in _RESOLVES.finditer(response)]
+    out += [{"pos": m.start(), "marker": "is correct", "inline": False, "items": [m.group(1)]}
+            for m in _QUOTED_CORRECT.finditer(response)]
+    return sorted(out, key=lambda d: d["pos"])
+
+
+def _split_items(paragraphs: list[str]) -> list[str]:
+    """A list answer ("- a", "1. b") becomes one item per entry; continuation lines stay with their entry."""
+    items = []
+    for para in paragraphs:
+        for ln in para.split("\n"):
+            if _LIST_ITEM.match(ln) or not items:
+                items.append(ln)
+            else:
+                items[-1] += "\n" + ln
+    return items
+
+
+def _options_in(text: str, opts: list[str]) -> list[int]:
+    """Options whose (normalised) text appears in `text`; an occurrence inside a longer matched option
+    does not count (so "2" inside "2.1" or "if x:" inside "elif x:" is ignored)."""
+    t = _rnorm(text)
+    hits = []
+    for i, o in enumerate(opts):
+        n = _rnorm(o)
+        if not n:
+            continue
+        for m in re.finditer(re.escape(n), t):
+            a, b = m.start(), m.end()
+            before_ok = a == 0 or not (t[a - 1].isalnum() or t[a - 1] in "_.\"")
+            after_ok = b == len(t) or not (t[b].isalnum() or t[b] in "_\"") and \
+                not (t[b] == "." and b + 1 < len(t) and t[b + 1].isalnum())
+            if before_ok and after_ok:
+                hits.append((a, b, i))
+    keep = {i for a, b, i in hits
+            if not any(a2 <= a and b <= b2 and (b2 - a2) > (b - a) for a2, b2, _ in hits)}
+    return sorted(keep)
+
+
+def _numbers(statement: dict, opts: list[str]) -> list[int]:
+    found = set()
+    for item in statement["items"]:
+        found |= set(_options_in(item, opts))
+        found |= {int(n) - 1 for n in _OPTION_REF.findall(item) if 0 < int(n) <= len(opts)}
+    text = " ".join(statement["items"])
+    if "option" in statement["marker"].lower() and re.fullmatch(r"(?i)[\d\s,&.]*(?:and[\d\s,&.]*)*", text):
+        found |= {int(n) - 1 for n in re.findall(r"\d+", text) if 0 < int(n) <= len(opts)}
+    return sorted(found)
+
+
+def read_choice(response: str, opts: list[str]) -> dict:
+    """The option number(s) a response chooses, by the rules in docs/MANUAL_CLEANING.md ("MCQ answers"):
+    the last explicit answer statement counts (a trailing inline remark that names no option, such as
+    "the correct options are the ones that...", is skipped); its text is matched to the options, or
+    "option N" to the N-th listed option; an answer that is not one of the options counts as no choice."""
+    statements = _statement_blocks(response, opts)
+    if not statements:
+        return {"numbers": [], "note": "no answer statement", "statement": ""}
+    for st in reversed(statements):
+        numbers = _numbers(st, opts)
+        if numbers or not st["inline"]:
+            break
+    note = f"{len(statements)} answer statement(s); used: '{st['marker']}'"
+    if not numbers:
+        note += "; stated answer is not one of the options"
+    return {"numbers": numbers, "note": note, "statement": " / ".join(st["items"])[:200]}
 
 
 def auto_choice(response: str, opts: list[str]) -> list[str]:
-    """Heuristic: the option(s) the response commits to (checked in order: 'answer is X' lines, bold text,
-    first line). Returns [] if nothing matches. Only a suggestion for the human annotator."""
-    explicit = [m.group(1) for m in _ANSWER.finditer(response)]
-    bold = re.findall(r"\*\*(.+?)\*\*", response, re.S)
-    first = next((ln for ln in response.splitlines() if ln.strip()), "")
-    candidates = explicit + bold + [first]
-    nopts = [(o, norm(o)) for o in opts]
-    clean = [norm(c.strip("`*: ")) for c in candidates]
-    for c in clean:  # 1) a candidate that IS one option
-        exact = [o for o, n in nopts if n and (c == n or c == n.strip('"'))]
-        if exact:
-            return exact
-    if explicit or bold:  # 2) the model's own stated answer, even if option parsing failed
-        return [(explicit or bold)[0].strip("`*: .")]
-    for c in clean:  # 3) options mentioned inside the first line
-        contained = [o for o, n in nopts if n and len(n) > 1 and n in c]
-        if contained:
-            return contained
-    return []
+    """Option texts chosen by read_choice (kept for older callers)."""
+    return [opts[i] for i in read_choice(response, opts)["numbers"]]
 
 
 def choice_numbers(texts: list[str], opts: list[str]) -> list[int]:
-    """Option numbers for option texts (e.g. auto_choice output); the first match when options repeat."""
+    """Option numbers for option texts; the first match when options repeat."""
     names = [norm(o) for o in opts]
     return sorted({names.index(norm(t)) for t in texts if norm(t) in names})
 

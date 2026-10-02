@@ -4,23 +4,23 @@
   "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
   "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
   "paper_row": "LLaMA3",
-  "track": "auto (manual not available yet)",
-  "warnings": [
-    "No manual-track evaluation yet (step 4 of docs/REPLICATION_PAPER.md).",
-    "No MCQ score yet (step 5)."
+  "track": "manual",
+  "warnings": [],
+  "notes": [
+    "MCQ choices: 0/100 rows checked by hand; the others were read by the rule-based reader v2.0 (rules in docs/MANUAL_CLEANING.md)."
   ],
   "coding": {
     "codingsites": {
       "pass@1": 43.22033898305085,
       "ci95": [
         34.74576271186441,
-        52.54237288135594
+        51.69491525423729
       ],
       "n_tasks": 118,
       "labels_pct": {
         "NO_CODE": 0.0,
-        "NOT_EXECUTED": 12.711864406779661,
-        "ALL_FAILED": 16.949152542372882,
+        "NOT_EXECUTED": 11.016949152542374,
+        "ALL_FAILED": 18.64406779661017,
         "PARTIAL": 27.11864406779661,
         "ALL_PASSED": 43.220338983050844
       },
@@ -35,14 +35,40 @@
       "n_tasks": 100,
       "labels_pct": {
         "NO_CODE": 0.0,
-        "NOT_EXECUTED": 8.0,
-        "ALL_FAILED": 26.0,
+        "NOT_EXECUTED": 9.0,
+        "ALL_FAILED": 25.0,
         "PARTIAL": 29.0,
         "ALL_PASSED": 37.0
       },
       "paper": 30
     }
   },
-  "mcq": null,
-  "manual_vs_auto": null
+  "mcq": {
+    "n_items": 100,
+    "accuracy": 60.0,
+    "ci95": [
+      50.0,
+      69.0
+    ],
+    "labels_pct": {
+      "0": 26.0,
+      "1": 14.0,
+      "2": 60.0
+    },
+    "paper": 52,
+    "human_checked": 0,
+    "rows": 100
+  },
+  "manual_vs_auto": {
+    "tasks": 218,
+    "same_label": 212,
+    "different": [
+      "academic/026",
+      "codingsites/012",
+      "codingsites/015",
+      "codingsites/037",
+      "codingsites/052",
+      "codingsites/085"
+    ]
+  }
 }

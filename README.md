@@ -14,7 +14,7 @@ pass@1 (%) on the released data, 95% bootstrap CI over tasks; the paper's value 
 
 | Model | CodingSites | Academic | MCQ | code cleaning |
 |---|---|---|---|---|
-| meta-llama/Llama-3.1-8B-Instruct | 43.2 [34.7, 52.5] (40) | 37.0 [28.0, 46.0] (30) | pending (52) | *auto* (manual pending) |
+| meta-llama/Llama-3.1-8B-Instruct | 43.2 [34.7, 51.7] (40) | 37.0 [28.0, 46.0] (30) | 60.0 [50.0, 69.0] (52) | manual |
 | mistralai/Mistral-7B-Instruct-v0.1 | 41.5 [32.2, 50.8] (44) | 25.0 [17.0, 34.0] (24) | pending (36) | *auto* (manual pending) |
 
 Coding numbers marked *auto* use automatic code extraction; the final numbers use hand-cleaned code, as the paper did. Full reports: `results/replication/<model>/greedy/paper_replication.md`.

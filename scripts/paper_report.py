@@ -68,14 +68,15 @@ def main() -> None:
         warnings.append(f"Manual cleaning incomplete: {manual['coverage']}.")
     if mcq is None:
         warnings.append("No MCQ score yet (step 5).")
-    elif mcq["human_checked"] < mcq["rows"]:
-        warnings.append(f"MCQ: only {mcq['human_checked']}/{mcq['rows']} rows human-checked; the rest use the "
-                        "automatic suggestion.")
+    notes = []
+    if mcq and mcq["human_checked"] < mcq["rows"]:
+        notes.append(f"MCQ choices: {mcq['human_checked']}/{mcq['rows']} rows checked by hand; the others were read "
+                     f"by the rule-based reader v{mcq.get('reader_version', '?')} (rules in docs/MANUAL_CLEANING.md).")
 
     main_track = manual or auto
     track_name = "manual" if manual else "auto (manual not available yet)"
     result = {"model_key": model_key, "run": run_name, "hf_id": meta.get("hf_id"), "revision": meta.get("revision"),
-              "paper_row": row, "track": track_name, "warnings": warnings, "coding": {}, "mcq": None,
+              "paper_row": row, "track": track_name, "warnings": warnings, "notes": notes, "coding": {}, "mcq": None,
               "manual_vs_auto": None}
 
     md = [f"# Replication of CSEPrompts 2.0: {model_key} ({run_name})", "",
@@ -86,6 +87,7 @@ def main() -> None:
           f"- Coding results from the **{track_name}** cleaning track; 95% bootstrap CIs over tasks.", ""]
     if warnings:
         md += ["> **Not final:**", *[f"> - {w}" for w in warnings], ""]
+    md += [f"- {n}" for n in notes] + ([""] if notes else [])
 
     md += ["## pass@1 (%)", "", "| | ours [95% CI] | paper (±2, read off Fig. 3/4) | paper inside our CI? |",
            "|---|---|---|---|"]

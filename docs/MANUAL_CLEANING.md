@@ -66,3 +66,27 @@ still TODO.
   independently, into a copy of the directory, and report agreement on the resulting labels. The
   evaluation already compares the manual track with the automatic one.
 - Commit the annotation files after each session (`git add annotations && git commit`).
+
+## MCQ answers (version 1.0, fixed 2026-10-02)
+
+The paper graded MCQs against the answer keys; it does not say how a free-text response was read.
+These rules decide **which option(s) a response chose**. They are applied by hand (`chosen`) or by the
+rule-based reader `cseprompts.harness.mcq.read_choice` (`scripts/mcq.py autofill` → `auto_chosen`),
+which was checked against a full manual reading of the Llama-3.1-8B greedy sheet (100/100 rows agree).
+The model's response is never edited.
+
+1. **The answer is what the response states as its answer**: "The correct answer is …", "The correct
+   options are …", "The output of the line of code above is …", "… resolves to True", or
+   "'None of the above' is correct".
+2. **If it states an answer more than once, the last statement counts** (e.g. "However, the most accurate
+   option is …"). A closing remark that names no option ("the correct options are the ones that …") is
+   not a new answer.
+3. **Reasoning that contradicts the stated answer does not change it.** Example: "The correct answer is:
+   True … so `bool("")` will return False" chose **True**. Such rows are worth a manual look, but the
+   stated answer is what is graded.
+4. **Text is matched to the options as written**, ignoring backticks, list bullets, commas and `and`
+   between assignments. Quotes count: `"2"` is the option `"2"`, not `2`. A list of several answers
+   chooses all of them. "Option N" means the N-th listed option.
+5. **An answer that is not one of the options is no choice** (graded 0), e.g. `cost = 5001` when no
+   option has 5001. So is a response with no answer statement (e.g. one that loops until the length limit).
+6. Identical options (the release repeats some) are all chosen when their text is chosen.

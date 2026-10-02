@@ -1,0 +1,3208 @@
+uid,sample,options,auto_chosen,auto_note,chosen,checked,question,response
+mcq/000,0,"[0] 2 || [1] 2.1 || [2] ""2"" || [3] ""2.1"" || [4] True || [5] False || [6] An error message || [7] There will be no output",1,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(float(""2.1""))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+
+2
+
+2.1
+
+""2""
+
+""2.1""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code above is:
+
+2.1"
+mcq/001,0,"[0] 2 || [1] 2.1 || [2] ""2"" || [3] ""2.1"" || [4] True || [5] False || [6] An error message || [7] There will be no output",2,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(int(""2.1""))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+
+2
+
+2.1
+
+""2""
+
+""2.1""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code above would be:
+
+""2""
+
+This is because the `int()` function in Python truncates the decimal part of a number when converting it to an integer. So, ""2.1"" is converted to 2."
+mcq/002,0,"[0] 2 || [1] 2.0 || [2] ""2"" || [3] ""2.0"" || [4] True || [5] False || [6] An error message || [7] There will be no output",0,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(int(""2""))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+2
+
+2.0
+
+""2""
+
+""2.0""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code `print(int(""2""))` would be:
+
+2"
+mcq/003,0,"[0] 2 || [1] 2.1 || [2] ""2"" || [3] ""2.1"" || [4] True || [5] False || [6] An error message || [7] There will be no output",3,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(str(2.1))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+
+2
+
+2.1
+
+""2""
+
+""2.1""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code above would be:
+
+""2.1"""
+mcq/004,0,"[0] 2 || [1] 2.0 || [2] ""2"" || [3] ""2.0"" || [4] True || [5] False || [6] An error message || [7] There will be no output",1,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(float(""2""))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+
+2
+
+2.0
+
+""2""
+
+""2.0""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code above is:
+
+2.0"
+mcq/005,0,"[0] 1 || [1] 1.0 || [2] ""1"" || [3] ""1.0"" || [4] True || [5] False || [6] An error message || [7] There will be no output",0,reader v2.0: 2 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+
+1
+
+1.0
+
+""1""
+
+""1.0""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code `print(bool(""""))` would be:
+
+1
+
+This is because an empty string in Python is considered ""falsy"" in a boolean context, meaning it is treated as False in a boolean expression. However, when printed, it is still printed as an integer, which is 0, but since the options include ""1"" and not 0, the correct answer is:
+
+1"
+mcq/006,0,"[0] Print one option from below: || [1] 2 || [2] 2.0 || [3] ""2"" || [4] ""2.0"" || [5] True || [6] False || [7] An error message || [8] There will be no output",5,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(bool(2))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Print one option from below:
+
+2
+
+2.0
+
+""2""
+
+""2.0""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code `print(bool(2))` would be:
+
+True"
+mcq/007,0,"[0] 0 || [1] 0.0 || [2] ""0"" || [3] ""0.0"" || [4] True || [5] False || [6] An error message || [7] There will be no output",1,reader v2.0: 1 answer statement(s); used: 'The output of the line of code',,,"print(float(False))
+What would be the output of the line of code above? Include only what is actually printed to the console.
+Pick one option from below:
+
+0
+
+0.0
+
+""0""
+
+""0.0""
+
+True
+
+False
+
+An error message
+
+There will be no output","The output of the line of code `print(float(False))` would be:
+
+0.0"
+mcq/008,0,[0] True || [1] False,0,reader v2.0: 2 answer statement(s); used: 'correct answer',,,"not (False and True)
+Does the statement above resolve to True or False?
+
+True
+
+False","To evaluate the statement ""not (False and True)"", we need to follow the order of operations (PEMDAS):
+
+1. Evaluate the expression inside the parentheses: False and True
+2. Since False and True is False (because False is False), the expression becomes not False
+3. The not operator negates the value, so not False becomes True
+
+Therefore, the statement ""not (False and True)"" resolves to True. 
+
+The correct answer is:  True"
+mcq/009,0,[0] True || [1] False,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"False or not True
+Does the statement above resolve to True or False?
+
+True
+
+False","Based on the options provided, the correct answer is:
+
+ True"
+mcq/010,0,[0] True || [1] False,1,reader v2.0: 1 answer statement(s); used: 'resolves to',,,"(True and not False) and False
+Does the statement above resolve to True or False?
+
+True
+
+False","To evaluate the statement ""(True and not False) and False"", we need to follow the order of operations (PEMDAS):
+
+1. Evaluate the expression inside the parentheses: not False = True
+2. Now the statement becomes: (True and True) and False
+3. Evaluate the ""and"" operation: True and True = True
+4. Now the statement becomes: True and False
+5. Finally, evaluate the ""and"" operation: True and False = False
+
+So, the statement ""(True and not False) and False"" resolves to False."
+mcq/011,0,[0] True || [1] False,0,reader v2.0: 1 answer statement(s); used: 'resolves to',,,"(False and True) or (False or True)
+Does the statement above resolve to True or False?
+
+True
+
+False","To evaluate the statement ""(False and True) or (False or True)"", we need to follow the order of operations (PEMDAS):
+
+1. Evaluate the expressions inside the parentheses:
+   - (False and True) = False (because and requires both conditions to be True)
+   - (False or True) = True (because or requires at least one condition to be True)
+
+2. Now, evaluate the entire statement:
+   - (False and True) or (False or True) = False or True
+
+3. Finally, evaluate the or operation:
+   - False or True = True (because or requires at least one condition to be True)
+
+So, the statement ""(False and True) or (False or True)"" resolves to True."
+mcq/012,0,"[0] user_is_invalid = True   
+password_correct = True   
+previously_authenticated = True || [1] user_is_invalid = True   
+password_correct = True   
+previously_authenticated = False || [2] user_is_invalid = True   
+password_correct = False  
+previously_authenticated = True || [3] user_is_invalid = True   
+password_correct = False  
+previously_authenticated = False || [4] user_is_invalid = False  
+password_correct = True   
+previously_authenticated = True || [5] user_is_invalid = False  
+password_correct = False  
+previously_authenticated = False || [6] None of the above",4,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| if not user_is_invalid and (password_correct or previously_authenticated):  
+
+2|     print(""Login successful!"")  
+
+3| else:  
+
+4|     print(""Login failed!"")  
+ 
+Which of the following values for user_is_invalid, password_correct, and previously_authenticated would result in ""Login successful!"" being printed?  
+  
+user_is_invalid = True   
+password_correct = True   
+previously_authenticated = True  
+ 
+  
+  
+user_is_invalid = True   
+password_correct = True   
+previously_authenticated = False  
+ 
+  
+  
+user_is_invalid = True   
+password_correct = False  
+previously_authenticated = True  
+ 
+  
+  
+user_is_invalid = True   
+password_correct = False  
+previously_authenticated = False  
+ 
+  
+  
+user_is_invalid = False  
+password_correct = True   
+previously_authenticated = True  
+ 
+  
+  
+user_is_invalid = False  
+password_correct = False  
+previously_authenticated = False  
+ 
+  
+  
+None of the above","To determine which values would result in ""Login successful!"" being printed, we need to evaluate the conditions in the if statement.
+
+The condition is: `if not user_is_invalid and (password_correct or previously_authenticated)`
+
+This can be broken down into two parts:
+
+1. `not user_is_invalid`: This will be True if `user_is_invalid` is False.
+2. `(password_correct or previously_authenticated)`: This will be True if either `password_correct` is True or `previously_authenticated` is True.
+
+So, for ""Login successful!"" to be printed, both conditions must be True.
+
+Let's evaluate the options:
+
+1. `user_is_invalid = True, password_correct = True, previously_authenticated = True`: This will not work because `user_is_invalid` is True, so the first condition is False.
+2. `user_is_invalid = True, password_correct = True, previously_authenticated = False`: This will not work because `user_is_invalid` is True, so the first condition is False.
+3. `user_is_invalid = True, password_correct = False, previously_authenticated = True`: This will not work because `user_is_invalid` is True, so the first condition is False.
+4. `user_is_invalid = True, password_correct = False, previously_authenticated = False`: This will not work because `user_is_invalid` is True, so the first condition is False.
+5. `user_is_invalid = False, password_correct = True, previously_authenticated = True`: This will work because both conditions are True.
+6. `user_is_invalid = False, password_correct = False, previously_authenticated = False`: This will not work because the second condition is False.
+
+Therefore, the correct answer is:
+
+* `user_is_invalid = False, password_correct = True, previously_authenticated = True`"
+mcq/013,0,"[0] age = 23  
+born_in_the_us = False  
+time_since_citizenship = 2 || [1] age = 23  
+born_in_the_us = False  
+time_since_citizenship = 8 || [2] age = 31  
+born_in_the_us = False  
+time_since_citizenship = 5 || [3] age = 40  
+born_in_the_us = True  
+time_since_citizenship = 40 || [4] age = 48  
+born_in_the_us = False  
+time_since_citizenship = 9 || [5] age = 23  
+born_in_the_us = False  
+time_since_citizenship = 8 || [6] None of the above","1, 5",reader v2.0: 1 answer statement(s); used: 'correct options',,,"1| if age > 34 and born_in_the_us:  
+
+2|     print(""You can run for President in the US!"")  
+
+3| if age > 24 and time_since_citizenship > 6:  
+
+4|     print(""You can run for Representative in the US!"")  
+
+5| if age > 29 and time_since_citizenship > 8:  
+
+6|     print(""You can run for Senator in the US!"")  
+ 
+ Which of the following values for age, born_in_the_us, and time_since_citizenship would result in ""You can run for Representative in the US!"" being printed, but nothing else? 
+  
+age = 23  
+born_in_the_us = False  
+time_since_citizenship = 2  
+ 
+  
+  
+age = 23  
+born_in_the_us = False  
+time_since_citizenship = 8  
+ 
+  
+  
+age = 31  
+born_in_the_us = False  
+time_since_citizenship = 5  
+ 
+  
+  
+age = 40  
+born_in_the_us = True  
+time_since_citizenship = 40  
+ 
+  
+  
+age = 48  
+born_in_the_us = False  
+time_since_citizenship = 9  
+ 
+  
+  
+age = 23  
+born_in_the_us = False  
+time_since_citizenship = 8  
+ 
+  
+  
+None of the above  ","To determine which values would result in ""You can run for Representative in the US!"" being printed, but nothing else, we need to evaluate each condition.
+
+1. For ""You can run for Representative in the US!"", the conditions are: age > 24 and time_since_citizenship > 6.
+
+Let's evaluate each option:
+
+- Option 1: age = 23, born_in_the_us = False, time_since_citizenship = 2. This does not meet the condition time_since_citizenship > 6.
+- Option 2: age = 23, born_in_the_us = False, time_since_citizenship = 8. This meets the condition time_since_citizenship > 6, but not age > 24.
+- Option 3: age = 31, born_in_the_us = False, time_since_citizenship = 5. This does not meet the condition time_since_citizenship > 6.
+- Option 4: age = 40, born_in_the_us = True, time_since_citizenship = 40. This meets both conditions, but the first condition (age > 34) for ""You can run for President in the US!"" is also met, so this will print ""You can run for President in the US!"" as well.
+- Option 5: age = 48, born_in_the_us = False, time_since_citizenship = 9. This meets both conditions, but the first condition (age > 34) for ""You can run for President in the US!"" is also met, so this will print ""You can run for President in the US!"" as well.
+- Option 6: age = 23, born_in_the_us = False, time_since_citizenship = 8. This meets the condition time_since_citizenship > 6, but not age > 24.
+
+So, the correct options are:
+
+- Option 2: age = 23, born_in_the_us = False, time_since_citizenship = 8.
+- Option 6: age = 23, born_in_the_us = False, time_since_citizenship = 8.
+
+Both of these options meet the condition for ""You can run for Representative in the US!"", but do not meet the conditions for ""You can run for President in the US!"" or ""You can run for Senator in the US!""."
+mcq/014,0,"[0] atm_nearby = True   
+cashback_nearby = True   
+cash_on_hand = 15 || [1] atm_nearby = True   
+cashback_nearby = True   
+cash_on_hand = 20 || [2] atm_nearby = True   
+cashback_nearby = True   
+cash_on_hand = 25 || [3] atm_nearby = False  
+cashback_nearby = True   
+cash_on_hand = 15 || [4] atm_nearby = True   
+cashback_nearby = False  
+cash_on_hand = 20 || [5] atm_nearby = False  
+cashback_nearby = False  
+cash_on_hand = 25 || [6] None of the above",1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| if cash_on_hand < 20 and (atm_nearby or cashback_nearby):  
+
+2|     print(""Get some cash!"")  
+
+3| else:  
+
+4|     print(""Go home!"")  
+ 
+ Which of the following values for atm_nearby, cashback_nearby, and cash_on_hand would result in both ""Get some cash!"" and ""Go home!"" being printed? 
+  
+atm_nearby = True   
+cashback_nearby = True   
+cash_on_hand = 15  
+ 
+  
+  
+atm_nearby = True   
+cashback_nearby = True   
+cash_on_hand = 20  
+ 
+  
+  
+atm_nearby = True   
+cashback_nearby = True   
+cash_on_hand = 25  
+ 
+  
+  
+atm_nearby = False  
+cashback_nearby = True   
+cash_on_hand = 15  
+ 
+  
+  
+atm_nearby = True   
+cashback_nearby = False  
+cash_on_hand = 20  
+ 
+  
+  
+atm_nearby = False  
+cashback_nearby = False  
+cash_on_hand = 25  
+ 
+  
+  
+None of the above  ","To determine which values would result in both ""Get some cash!"" and ""Go home!"" being printed, we need to analyze the conditions:
+
+1. ""Get some cash!"" is printed when `cash_on_hand < 20` and either `atm_nearby` or `cashback_nearby` is `True`.
+2. ""Go home!"" is printed when neither condition in (1) is met.
+
+Let's evaluate each option:
+
+1. `atm_nearby = True`, `cashback_nearby = True`, `cash_on_hand = 15`: Both conditions for ""Get some cash!"" are met, so ""Go home!"" will not be printed.
+2. `atm_nearby = True`, `cashback_nearby = True`, `cash_on_hand = 20`: The condition for ""Get some cash!"" is not met because `cash_on_hand >= 20`, so ""Go home!"" will be printed.
+3. `atm_nearby = True`, `cashback_nearby = True`, `cash_on_hand = 25`: The condition for ""Get some cash!"" is not met because `cash_on_hand >= 20`, so ""Go home!"" will be printed.
+4. `atm_nearby = False`, `cashback_nearby = True`, `cash_on_hand = 15`: The condition for ""Get some cash!"" is not met because `atm_nearby` is `False`, so ""Go home!"" will be printed.
+5. `atm_nearby = True`, `cashback_nearby = False`, `cash_on_hand = 20`: The condition for ""Get some cash!"" is not met because `cashback_nearby` is `False`, so ""Go home!"" will be printed.
+6. `atm_nearby = False`, `cashback_nearby = False`, `cash_on_hand = 25`: The condition for ""Get some cash!"" is not met because both `atm_nearby` and `cashback_nearby` are `False`, so ""Go home!"" will be printed.
+
+However, we are looking for a scenario where both ""Get some cash!"" and ""Go home!"" are printed. This can only happen when the condition for ""Get some cash!"" is met, but the condition for ""Go home!"" is also met. This can occur when `cash_on_hand >= 20` and both `atm_nearby` and `cashback_nearby` are `True`.
+
+The correct answer is:
+
+- `atm_nearby = True`, `cashback_nearby = True`, `cash_on_hand = 20`"
+mcq/015,0,"[0] cost = 500  
+out_of_network = False || [1] cost = 500  
+out_of_network = True || [2] cost = 2500  
+out_of_network = False || [3] cost = 2500  
+out_of_network = True || [4] cost = 5000  
+out_of_network = False || [5] cost = 5000  
+out_of_network = True || [6] cost = 7500  
+out_of_network = False || [7] cost = 7500  
+out_of_network = True || [8] None of the above","1, 3, 5, 7",reader v2.0: 2 answer statement(s); used: 'correct answers',,,"1| if out_of_network and cost > 1000:  
+
+2|     print(""The maximum out-of-network cost is $1000."")  
+
+3| elif not out_of_network and cost > 5000:  
+
+4|     print(""The maximum in-network cost is $5000."")  
+
+5| else:  
+
+6|     print(""Expense approved!"")  
+ 
+Which of the following values for out_of_network and cost would result in ""The maximum out-of-network cost is $1000."" being printed? (There may be more than one right answer. You may select any right answer.)  
+  
+cost = 500  
+out_of_network = False  
+ 
+  
+  
+cost = 500  
+out_of_network = True  
+ 
+  
+  
+cost = 2500  
+out_of_network = False  
+ 
+  
+  
+cost = 2500  
+out_of_network = True  
+ 
+  
+  
+cost = 5000  
+out_of_network = False  
+ 
+  
+  
+cost = 5000  
+out_of_network = True  
+ 
+  
+  
+cost = 7500  
+out_of_network = False  
+ 
+  
+  
+cost = 7500  
+out_of_network = True  
+ 
+  
+  
+None of the above ","To determine which values of `out_of_network` and `cost` would result in ""The maximum out-of-network cost is $1000."" being printed, we need to analyze the given conditions:
+
+1. `if out_of_network and cost > 1000:`
+
+This condition will be true if `out_of_network` is `True` and `cost` is greater than 1000.
+
+Based on this, the correct values for `out_of_network` and `cost` that would result in ""The maximum out-of-network cost is $1000."" being printed are:
+
+- `cost = 500` and `out_of_network = True`
+- `cost = 2500` and `out_of_network = True`
+- `cost = 5000` and `out_of_network = True`
+- `cost = 7500` and `out_of_network = True`
+
+So, the correct answers are:
+
+- `cost = 500` and `out_of_network = True`
+- `cost = 2500` and `out_of_network = True`
+- `cost = 5000` and `out_of_network = True`
+- `cost = 7500` and `out_of_network = True`"
+mcq/016,0,"[0] cost = 500  
+out_of_network = False || [1] cost = 500  
+out_of_network = True || [2] cost = 2500  
+out_of_network = False || [3] cost = 2500  
+out_of_network = True || [4] cost = 50  
+out_of_network = False || [5] cost = 50  
+out_of_network = True || [6] cost = 750  
+out_of_network = False || [7] cost = 750  
+out_of_network = True || [8] None of the above",,reader v2.0: 1 answer statement(s); used: 'correct answer'; stated answer is not one of the options,,,"1| if out_of_network and cost > 1000:   
+ 
+2|     print(""The maximum out-of-network cost is $1000."")   
+ 
+3| elif not out_of_network and cost > 5000:   
+ 
+4|     print(""The maximum in-network cost is $5000."")  
+ 
+ 5| else:   
+ 
+6|     print(""Expense approved!"")  
+ 
+  
+
+Which of the following values for out_of_network and cost would result in both ""The maximum out-of-network cost is $1000."" and ""The maximum in-network cost is $5000."" being printed? (There may be more than one right answer. You may select any right answer.) 
+  
+cost = 500  
+out_of_network = False  
+ 
+  
+  
+cost = 500  
+out_of_network = True  
+ 
+  
+  
+cost = 2500  
+out_of_network = False  
+ 
+  
+  
+cost = 2500  
+out_of_network = True  
+ 
+  
+  
+cost = 50  
+out_of_network = False  
+ 
+  
+  
+cost = 50  
+out_of_network = True  
+ 
+  
+  
+  
+  
+cost = 750  
+out_of_network = False  
+ 
+  
+  
+cost = 750  
+out_of_network = True  
+ 
+  
+  
+  
+  
+  
+  
+None of the above","To determine which values for `out_of_network` and `cost` would result in both ""The maximum out-of-network cost is $1000."" and ""The maximum in-network cost is $5000."" being printed, we need to analyze the conditions in the code.
+
+The first condition checks if `out_of_network` is `True` and `cost` is greater than 1000. The second condition checks if `out_of_network` is `False` and `cost` is greater than 5000.
+
+For both conditions to be met, we need to find a combination of `out_of_network` and `cost` that satisfies both conditions.
+
+1. `out_of_network` is `True` and `cost` is greater than 1000.
+2. `out_of_network` is `False` and `cost` is greater than 5000.
+
+The only combination that satisfies both conditions is:
+
+- `out_of_network = True` and `cost = 1001` (or any value greater than 1000)
+- `out_of_network = False` and `cost = 5001` (or any value greater than 5000)
+
+However, the question asks for the values that would result in both messages being printed. The condition for the first message (`out_of_network = True` and `cost > 1000`) is always met when the condition for the second message (`out_of_network = False` and `cost > 5000`) is met, because `cost` is greater than 5000, which is also greater than 1000.
+
+So, the correct answer is:
+
+- `cost = 5001` and `out_of_network = False`
+
+This is the only value that would result in both messages being printed."
+mcq/017,0,"[0] 1| if out_of_network and cost > 1000: || [1] 2| print(""The maximum out-of-network cost is $1000."") || [2] 3| elif not out_of_network and cost > 5000: || [3] 4| print(""The maximum in-network cost is $5000."") || [4] 5| else: || [5] 6| print(""Expense approved!"") || [6] cost = 500 
+out_of_network = False || [7] cost = 500 
+out_of_network = True || [8] cost = 2500 
+out_of_network = False || [9] cost = 2500 
+out_of_network = True || [10] cost = 5000 
+out_of_network = False || [11] cost = 5000 
+out_of_network = True || [12] cost = 7500 
+out_of_network = False || [13] cost = 7500 
+out_of_network = True || [14] None of the above",,reader v2.0: 5 answer statement(s); used: 'correct answers'; stated answer is not one of the options,,,"1| if out_of_network and cost > 1000:  
+
+2| print(""The maximum out-of-network cost is $1000."")  
+
+3| elif not out_of_network and cost > 5000:  
+
+4| print(""The maximum in-network cost is $5000."") 
+
+ 5| else:  
+
+6| print(""Expense approved!"") 
+
+ 
+
+cost = 500 
+out_of_network = False 
+
+ 
+
+cost = 500 
+out_of_network = True 
+
+ 
+
+cost = 2500 
+out_of_network = False 
+
+ 
+
+cost = 2500 
+out_of_network = True 
+
+ 
+
+cost = 5000 
+out_of_network = False 
+
+ 
+
+cost = 5000 
+out_of_network = True 
+
+ 
+
+ 
+
+cost = 7500 
+out_of_network = False 
+
+ 
+
+cost = 7500 
+out_of_network = True 
+
+ 
+
+ 
+
+ 
+
+None of the above ","Based on the given code and test cases, the correct output for each scenario is as follows:
+
+1. cost = 500, out_of_network = False: Expense approved!
+2. cost = 500, out_of_network = True: The maximum out-of-network cost is $1000.
+3. cost = 2500, out_of_network = False: Expense approved!
+4. cost = 2500, out_of_network = True: The maximum out-of-network cost is $1000.
+5. cost = 5000, out_of_network = False: The maximum in-network cost is $5000.
+6. cost = 5000, out_of_network = True: The maximum out-of-network cost is $1000.
+7. cost = 7500, out_of_network = False: The maximum in-network cost is $5000.
+8. cost = 7500, out_of_network = True: The maximum out-of-network cost is $1000.
+
+However, the question asks for the correct answer from the given options, which are not provided. Assuming the options are related to the output of the code, here are the correct answers:
+
+- The maximum out-of-network cost is $1000. (for cost = 500, out_of_network = True; cost = 2500, out_of_network = True; cost = 5000, out_of_network = True; cost = 7500, out_of_network = True)
+- The maximum in-network cost is $5000. (for cost = 5000, out_of_network = False; cost = 7500, out_of_network = False)
+- Expense approved! (for cost = 500, out_of_network = False; cost = 2500, out_of_network = False)
+
+So, the correct answers are:
+
+- The maximum out-of-network cost is $1000.
+- The maximum in-network cost is $5000.
+- Expense approved!"
+mcq/018,0,"[0] is_breakfasttime = True  
+cash = 25 || [1] is_breakfasttime = True  
+cash = 15 || [2] is_breakfasttime = True  
+cash = 7 || [3] is_breakfasttime = True  
+cash = 2 || [4] is_breakfasttime = False  
+cash = 25 || [5] is_breakfasttime = False  
+cash = 15 || [6] is_breakfasttime = False  
+cash = 7 || [7] is_breakfasttime = False  
+cash = 2 || [8] None of the above","2, 3",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| if is_breakfasttime:   
+ 
+2|     if cash > 10:   
+ 
+3|         print(""Go to Egg Harbor!"")   
+ 
+4|     elif cash > 5:   
+ 
+5|         print(""Go to Waffle House!"")   
+ 
+6|     elif cash > 1:   
+ 
+7|         print(""Go to McDonald's!"")   
+ 
+8| else:   
+ 
+9|     if cash > 20:   
+ 
+10|        print(""Go to Atwood's!"")   
+ 
+11|     elif cash > 10:   
+ 
+12|         print(""Go to Cypress!"")   
+ 
+13|     else:  
+
+14|         print(""Go to Waffle House!"")  
+ 
+  
+
+Which of the following values for is_breakfasttime and cash would result in ""Go to McDonald's!"" being printed? (There may be more than one right answer. You may select any correct answer.) 
+  
+is_breakfasttime = True  
+cash = 25  
+ 
+  
+  
+is_breakfasttime = True  
+cash = 15  
+ 
+  
+  
+is_breakfasttime = True  
+cash = 7  
+ 
+  
+  
+is_breakfasttime = True  
+cash = 2  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 25  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 15  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 7  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 2  
+ 
+  
+  
+None of the above  
+","To determine which values of `is_breakfasttime` and `cash` would result in ""Go to McDonald's!"" being printed, we need to analyze the given code.
+
+The condition for ""Go to McDonald's!"" is met when `cash > 1` and `is_breakfasttime` is `True`. 
+
+Let's evaluate the given options:
+
+1. `is_breakfasttime = True`, `cash = 25`: This would result in ""Go to Egg Harbor!"" being printed because `cash > 10`.
+2. `is_breakfasttime = True`, `cash = 15`: This would result in ""Go to Waffle House!"" being printed because `cash > 5`.
+3. `is_breakfasttime = True`, `cash = 7`: This would result in ""Go to McDonald's!"" being printed because `cash > 1`.
+4. `is_breakfasttime = True`, `cash = 2`: This would result in ""Go to McDonald's!"" being printed because `cash > 1`.
+5. `is_breakfasttime = False`, `cash = 25`: This would result in the `else` block being executed, and then the `if cash > 20` condition would be checked, which would result in ""Go to Atwood's!"" being printed.
+6. `is_breakfasttime = False`, `cash = 15`: This would result in the `else` block being executed, and then the `if cash > 10` condition would be checked, which would result in ""Go to Cypress!"" being printed.
+7. `is_breakfasttime = False`, `cash = 7`: This would result in the `else` block being executed, and then the `if cash > 10` condition would be checked, which would result in ""Go to Cypress!"" being printed.
+8. `is_breakfasttime = False`, `cash = 2`: This would result in the `else` block being executed, and then the `if cash > 10` condition would be checked, which would result in ""Go to Cypress!"" being printed.
+
+Therefore, the correct answers are:
+
+- `is_breakfasttime = True`, `cash = 7`
+- `is_breakfasttime = True`, `cash = 2`"
+mcq/019,0,"[0] is_breakfasttime = True  
+cash = 25 || [1] is_breakfasttime = True  
+cash = 15 || [2] is_breakfasttime = True  
+cash = 7 || [3] is_breakfasttime = True  
+cash = 2 || [4] is_breakfasttime = False  
+cash = 25 || [5] is_breakfasttime = False  
+cash = 15 || [6] is_breakfasttime = False  
+cash = 7 || [7] is_breakfasttime = False  
+cash = 2 || [8] None of the above",8,reader v2.0: 1 answer statement(s); used: 'is correct',,,"1| if is_breakfasttime:   
+ 
+2|     if cash > 10:   
+ 
+3|         print(""Go to Egg Harbor!"")   
+ 
+4|     elif cash > 5:   
+ 
+5|         print(""Go to Waffle House!"")   
+ 
+6|     elif cash > 1:   
+ 
+7|         print(""Go to McDonald's!"")   
+ 
+8| else:   
+ 
+9|     if cash > 20:   
+ 
+10|        print(""Go to Atwood's!"")   
+ 
+11|     elif cash > 10:   
+ 
+12|         print(""Go to Cypress!"")   
+ 
+13|     else:  
+
+14|         print(""Go to Waffle House!"") 
+ 
+  
+
+Which of the following values for is_breakfasttime and cash would result in nothing being printed at all? (There may be more than one right answer. You may select any correct answer.) 
+  
+is_breakfasttime = True  
+cash = 25  
+ 
+  
+  
+is_breakfasttime = True  
+cash = 15  
+ 
+  
+  
+is_breakfasttime = True  
+cash = 7  
+ 
+  
+  
+is_breakfasttime = True  
+cash = 2  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 25  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 15  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 7  
+ 
+  
+  
+is_breakfasttime = False  
+cash = 2  
+ 
+  
+  
+None of the above ","To determine which values of `is_breakfasttime` and `cash` would result in nothing being printed, we need to analyze the code.
+
+The code has two main conditions:
+
+1. The first condition checks if `is_breakfasttime` is `True` and `cash` is greater than 10. If this condition is met, the code prints ""Go to Egg Harbor!"" and skips the rest of the code.
+2. If the first condition is not met, the code checks the value of `cash` and prints a message accordingly.
+
+Now, let's analyze the given options:
+
+1. `is_breakfasttime = True, cash = 25`: In this case, the first condition is met, so ""Go to Egg Harbor!"" is printed, and nothing else is printed.
+2. `is_breakfasttime = True, cash = 15`: In this case, the first condition is not met, but the second condition is met, so ""Go to Waffle House!"" is printed.
+3. `is_breakfasttime = True, cash = 7`: In this case, the first condition is not met, and the second condition is not met, so the code checks the third condition. However, the third condition is also not met, so ""Go to McDonald's!"" is printed.
+4. `is_breakfasttime = True, cash = 2`: In this case, the first condition is not met, and the second condition is not met, so the code checks the third condition. The third condition is met, so ""Go to McDonald's!"" is printed.
+5. `is_breakfasttime = False, cash = 25`: In this case, the first condition is not met, and the code checks the value of `cash`. However, the value of `cash` is greater than 20, so the code enters the second `if` block and prints ""Go to Atwood's!"".
+6. `is_breakfasttime = False, cash = 15`: In this case, the first condition is not met, and the code checks the value of `cash`. The value of `cash` is greater than 10, so the code enters the second `if` block and prints ""Go to Cypress!"".
+7. `is_breakfasttime = False, cash = 7`: In this case, the first condition is not met, and the code checks the value of `cash`. The value of `cash` is greater than 1, so the code enters the second `elif` block and prints ""Go to McDonald's!"".
+8. `is_breakfasttime = False, cash = 2`: In this case, the first condition is not met, and the code checks the value of `cash`. The value of `cash` is greater than 1, so the code enters the second `elif` block and prints ""Go to McDonald's!"".
+
+Based on the analysis, the only case where nothing is printed is when `is_breakfasttime = True, cash = 10`. However, this option is not provided in the list.
+
+However, we can see that the last option ""None of the above"" is correct because none of the given options result in nothing being printed."
+mcq/020,0,"[0] [] || [1] [1] || [2] [-5, -4, -1] || [3] [1, 4, 2, 5, 9] || [4] [-5, 4, -4, 2, -1, 5, 9] || [5] [1, -5, 4, -4, 2, -1, 5, 9] || [6] An error would result before line 9 is reached.",3,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| def find_the_positives(a_list):
+2|     list_of_positives = []
+3|     for i in range(len(a_list)):
+4|         if i > 0:
+5|             list_of_positives.append(a_list[i])
+6|     return list_of_positives
+Above is a definition of a function called list_of_positives(). Now imagine that we were to run the code:
+
+7| my_list = [1, -5, 4, -4, 2, -1, 5, 9]
+8| my_list = find_the_positives(my_list)
+9| #What is the value of my_list when this line is reached?
+What would be the value of my_list after those lines have been executed?
+Pick One option from below:
+
+
+[]
+
+[1]
+
+[-5, -4, -1]
+
+[1, 4, 2, 5, 9]
+
+[-5, 4, -4, 2, -1, 5, 9]
+
+[1, -5, 4, -4, 2, -1, 5, 9]
+
+An error would result before line 9 is reached.","The correct answer is:
+
+[1, 4, 2, 5, 9]
+
+Explanation:
+
+The function `find_the_positives(a_list)` is supposed to return a list of positive numbers from the input list. However, the condition `if i > 0` in the for loop is incorrect. This condition will only append the elements at indices greater than 0, which means it will skip the first element at index 0.
+
+So, the function will only append the elements at indices 1, 2, 3, 4, 5, 6, and 7, which are 1, 4, 2, 5, 9, -4, and 5 respectively. The negative numbers are not appended because the condition `if i > 0` is not met for them.
+
+Therefore, the value of `my_list` after the lines have been executed will be `[1, 4, 2, 5, 9]`."
+mcq/021,0,"[0] [""L"", ""O"", ""N""] || [1] [""E"", ""L"", ""O"", ""N""] || [2] [""L"", ""E"", ""O"", ""N""] || [3] [""L"", ""O"", ""E"", ""N""] || [4] [""L"", ""O"", ""N"", ""E""] || [5] An error would result before line 5 is reached.",1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| def add_to_list(a_list, new_item, new_index):
+2|     a_list.insert(new_index, new_item)
+Above is a definition of a function called add_to_list(). Now imagine that we were to run the code:
+
+3| my_list = [""L"", ""O"", ""N""]
+4| add_to_list(my_list, 1, ""E"")
+5| #What is the value of my_list when this line is reached?
+What would be the value of my_list after those lines have been executed?
+Pick one option from below:
+
+
+[""L"", ""O"", ""N""]
+
+[""E"", ""L"", ""O"", ""N""]
+
+[""L"", ""E"", ""O"", ""N""]
+
+[""L"", ""O"", ""E"", ""N""]
+
+[""L"", ""O"", ""N"", ""E""]
+
+An error would result before line 5 is reached.","The correct answer is:
+
+[""E"", ""L"", ""O"", ""N""]
+
+Explanation:
+
+When the function `add_to_list` is called with `my_list`, `1`, and `""E""`, it inserts the string `""E""` at the index `1` in `my_list`. This means that `""E""` will be inserted before the string `""O""`, resulting in the list `[""L"", ""E"", ""O"", ""N""]`."
+mcq/022,0,"[0] None || [1] ""Austin"" || [2] {""Texas"": ""Austin""} || [3] {""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta""} || [4] {""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta"", ""Texas"": ""Austin""} || [5] {""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta"", ""Austin"": ""Texas""} || [6] An error would result before line 5 is reached.",4,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| def add_a_capitol(a_dict, a_state, a_city):
+2|     a_dict = {a_state: a_city}
+Above is a definition of a function called add_a_capitol(). Now imagine that we were to run the code:
+
+3| my_capitols = {""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta""}
+4| add_a_capitol(my_capitols, ""Texas"", ""Austin"")
+5| #What is the value of my_capitols when this line is reached?
+What would be the value of my_capitols after those lines have been executed? (Remember: key order does not matter in dictionaries)
+Pick one option from below:
+
+
+None
+
+""Austin""
+
+{""Texas"": ""Austin""}
+
+{""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta""}
+
+{""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta"", ""Texas"": ""Austin""}
+
+{""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta"", ""Austin"": ""Texas""}
+
+An error would result before line 5 is reached.","The correct answer is: {""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta"", ""Texas"": ""Austin""}
+
+Explanation: 
+
+In the function `add_a_capitol(a_dict, a_state, a_city)`, the line `a_dict = {a_state: a_city}` reassigns the `a_dict` variable to a new dictionary with the state as the key and the city as the value. However, this change is local to the function and does not affect the original dictionary `my_capitols`. 
+
+So, after the function call `add_a_capitol(my_capitols, ""Texas"", ""Austin"")`, the original dictionary `my_capitols` remains unchanged, and a new dictionary is created with the state ""Texas"" and city ""Austin"" as a key-value pair. This new dictionary is not assigned to any variable, so it is lost. 
+
+However, since the original dictionary `my_capitols` is passed by reference, the function can modify it. But in this case, the line `a_dict = {a_state: a_city}` reassigns the `a_dict` variable, which does not affect the original dictionary. 
+
+Therefore, the value of `my_capitols` after the function call remains the same as before, which is `{""Georgia"": ""Atlanta"", ""Idaho"": ""Boise"", ""Maine"": ""Augusta""}`."
+mcq/023,0,"[0] [1, 4, 2] || [1] [4, 4, 2] || [2] [1, 4, 2, 5] || [3] [1, 5, 2, 1, 5, 9] || [4] [1, 5, 4, 4, 2, 1, 5] || [5] [1, 5, 4, 4, 2, 1, 5, 9] || [6] An error would result before line 9 is reached.",5,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| def find_the_evens(a_list):
+2|     list_of_evens = []
+3|     for i in range(len(a_list)):
+4|         if i % 2 == 0:
+5|             list_of_evens.append(a_list[i])
+6|     return list_of_evens
+Above is a definition of a function called find_the_evens(). Now imagine that we were to run the code:
+
+7| my_list = [1, 5, 4, 4, 2, 1, 5, 9]
+8| find_the_evens(my_list)
+9| #What is the value of my_list when this line is reached?
+What would be the value of my_list after those lines have been executed?
+Pick one option from below:
+
+
+[1, 4, 2]
+
+[4, 4, 2]
+
+[1, 4, 2, 5]
+
+[1, 5, 2, 1, 5, 9]
+
+[1, 5, 4, 4, 2, 1, 5]
+
+[1, 5, 4, 4, 2, 1, 5, 9]
+
+An error would result before line 9 is reached.","The correct answer is:
+
+[1, 5, 4, 4, 2, 1, 5, 9]
+
+Explanation: 
+
+The function `find_the_evens(a_list)` is designed to append even numbers from the input list to a new list. However, it does not modify the original list. It only returns the new list of even numbers. Therefore, when we call `find_the_evens(my_list)`, it does not change the original list `my_list`. The original list remains unchanged, and the function simply returns a new list containing the even numbers from `my_list`. 
+
+So, after the line `find_the_evens(my_list)` is executed, `my_list` remains the same as it was initially: `[1, 5, 4, 4, 2, 1, 5, 9]`."
+mcq/024,0,"[0] None || [1] [""L"", ""O"", ""N""] || [2] [""E"", ""L"", ""O"", ""N""] || [3] [""L"", ""E"", ""O"", ""N""] || [4] [""L"", ""O"", ""E"", ""N""] || [5] [""L"", ""O"", ""N"", ""E""] || [6] An error would result before line 5 is reached.",2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| def add_to_list(a_list, new_item):
+2|     a_list.insert(0, new_item)
+Above is a definition of a function called add_to_list(). Now imagine that we were to run the code:
+
+3| my_list = [""L"", ""O"", ""N""]
+4| my_list = add_to_list(my_list, ""E"")
+5| #What is the value of my_list when this line is reached?
+What would be the value of my_list after those lines have been executed?
+Pick one option from below:
+
+
+None
+
+[""L"", ""O"", ""N""]
+
+[""E"", ""L"", ""O"", ""N""]
+
+[""L"", ""E"", ""O"", ""N""]
+
+[""L"", ""O"", ""E"", ""N""]
+
+[""L"", ""O"", ""N"", ""E""]
+
+An error would result before line 5 is reached.","The correct answer is: [""E"", ""L"", ""O"", ""N""]
+
+Explanation: 
+
+In the function `add_to_list(a_list, new_item)`, the line `a_list.insert(0, new_item)` inserts the new item at the beginning of the list. Therefore, when we call `add_to_list(my_list, ""E"")`, the list `my_list` will be modified to have the new item ""E"" at the beginning, resulting in the list `[""E"", ""L"", ""O"", ""N""]`."
+mcq/025,0,"[0] [4, 1, 2] || [1] [4, 5, 9] || [2] [1, 5, 9, 9] || [3] [4, 1, 2, 9] || [4] [4, 4, 2, 8] || [5] [4, 5, 9, 8] || [6] An error would result on or before line 9.",2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| def find_list_odds(a_list):
+2|     list_of_odds = []
+3|     for i in a_list:
+4|         if i % 2 == 1:
+5|             list_of_odds.append(i)
+6|     return list_of_odds
+Above is a definition of a function called find_list_odds(). Now imagine that we were to run the code:
+
+7| my_list = [4, 4, 1, 5, 2, 9, 9, 8]
+8| my_list = find_list_odds(my_list)
+9| print(my_list)
+What would line 9 print?
+Pick one option from below:
+
+
+[4, 1, 2]
+
+[4, 5, 9]
+
+[1, 5, 9, 9]
+
+[4, 1, 2, 9]
+
+[4, 4, 2, 8]
+
+[4, 5, 9, 8]
+
+An error would result on or before line 9.","The correct answer is:
+
+[1, 5, 9, 9]
+
+Explanation:
+
+The function `find_list_odds` iterates over the input list and appends any odd numbers to a new list. The original list `my_list` is modified by assigning the result of `find_list_odds` back to it. However, the original list is modified in-place, meaning that the original list is changed. 
+
+So, after the function call, `my_list` will contain only the odd numbers from the original list. The even numbers are lost. 
+
+Therefore, the output of `print(my_list)` will be `[1, 5, 9, 9]`."
+mcq/026,0,"[0] open(filename) || [1] open(filename, ""w"") || [2] open(filename, ""a"") || [3] open(filename, ""r"") || [4] my_file = open(filename) || [5] my_file = open(filename, ""a"") || [6] my_file = open(filename, ""r"")","0, 1, 4",reader v2.0: 1 answer statement(s); used: 'correct options',,,"1| def save_dictionary(filename, a_dict):
+2|     [1]
+3|     for item in a_dict:
+4|         [2]
+5|     my_file.close()
+Imagine you're writing a function to save a dictionary to a file such that each key:value pair in the dictionary is written to its own line of the file with a tab separating the key and the value. You may assume that the keys and values will both be integers. If the file does not exist when the function is called, you want to create it. If it already exists, you want to overwrite its contents.
+
+For example, save_dictionary(""Test.txt"", {1: 7, 2: 8, 3: 9}) would produce the file:
+
+1	7
+2	8
+3	9
+Which of the following lines could fill in [1] above? Note there may be more than one correct answer; you may select any of the correct answers for credit.
+Pick one option from below:
+
+open(filename)
+
+open(filename, ""w"")
+
+open(filename, ""a"")
+
+open(filename, ""r"")
+
+my_file = open(filename)
+
+my_file = open(filename, ""a"")
+
+my_file = open(filename, ""r"")","The correct options are:
+
+- open(filename)
+- open(filename, ""w"")
+- my_file = open(filename)
+- my_file = open(filename, ""w"")
+
+Explanation:
+
+- `open(filename)` opens the file in read mode by default, which is not necessary for writing. However, it does not throw an error if the file does not exist, which is a requirement.
+
+- `open(filename, ""w"")` opens the file in write mode, which will overwrite the file if it already exists. This is the most suitable option.
+
+- `my_file = open(filename)` is equivalent to `open(filename)`, as it assigns the result of the `open` function to the variable `my_file`.
+
+- `my_file = open(filename, ""w"")` is equivalent to `open(filename, ""w"")`, as it assigns the result of the `open` function to the variable `my_file`.
+
+`open(filename, ""a"")` and `open(filename, ""r"")` are not suitable options because they open the file in append and read modes, respectively, which do not meet the requirements of the problem."
+mcq/027,0,"[0] Yes, it will work. || [1] No, it will fail because a mode isn't specified for my_file = open(filename). || [2] No, it will fail because the for loop should iterate over my_file.readlines(). || [3] No, it will fail because the for loop should iterate over my_file directly using for line in my_file. || [4] No, it will fail because the lines are converted to floats, which will cause an error when the line is an integer. || [5] No, it will fail because the lines are converted to integers, which will cause an error when the line is a float. || [6] No, it will fail because the lines of the file aren't converted to integers before they are added to the sum. || [7] No, it will fail because the file should be closed before the result is printed.","5, 6",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"Imagine you have a file of integers called my_file.txt. Each line of the file contains either an integer (e.g. 5) or a float (e.g. 5.276).
+
+The code below attempts to read all the numbers in the file, average them, and print the result. Will it work? If not, why not?
+
+ 1| my_file = open(""my_file.txt"")
+ 2| sum = 0
+ 3| count = 0
+ 4| file_text = my_file.read()
+ 5| file_lines = file_text.split(""\n"")
+ 6| for line in file_lines:
+ 7|     sum += int(line)
+ 8|     count += 1
+ 9| print(sum / count)
+10| my_file.close()
+
+Pick one option from below:
+
+Yes, it will work.
+
+No, it will fail because a mode isn't specified for my_file = open(filename).
+
+No, it will fail because the for loop should iterate over my_file.readlines().
+
+No, it will fail because the for loop should iterate over my_file directly using for line in my_file.
+
+No, it will fail because the lines are converted to floats, which will cause an error when the line is an integer.
+
+No, it will fail because the lines are converted to integers, which will cause an error when the line is a float.
+
+No, it will fail because the lines of the file aren't converted to integers before they are added to the sum.
+
+No, it will fail because the file should be closed before the result is printed.","The correct answers are:
+
+- No, it will fail because the lines are converted to integers, which will cause an error when the line is a float.
+- No, it will fail because the lines of the file aren't converted to integers before they are added to the sum.
+
+Explanation:
+
+1. The `open()` function does not specify a mode, which is necessary to indicate whether the file should be opened for reading, writing, or appending. The default mode is 'r', which is correct in this case, but it's good practice to include it for clarity.
+
+2. The `read()` method reads the entire file into a string, which is then split into lines. This is not the most efficient way to read a file, especially for large files, as it loads the entire file into memory at once. However, it's not the reason why the code will fail.
+
+3. The `for` loop iterates over the lines of the file correctly.
+
+4. The issue is that the `int()` function will raise a `ValueError` when it encounters a float. To fix this, you should use the `float()` function to convert the line to a float, or use a try-except block to catch the `ValueError` and handle it accordingly.
+
+5. The lines are not converted to integers before being added to the sum, which means that the sum will be incorrect if the file contains floats.
+
+6. The file is closed correctly at the end of the script.
+
+Here's the corrected code:
+
+```python
+my_file = open(""my_file.txt"", 'r')
+sum = 0
+count = 0
+file_text = my_file.read()
+file_lines = file_text.split(""\n"")
+for line in file_lines:
+    try:
+        num = float(line)
+        sum += num
+        count += 1
+    except ValueError:
+        print(f""Skipping invalid line: {line}"")
+print(sum / count)
+my_file.close()
+```"
+mcq/028,0,[0] some_number >= 0 || [1] some_number = 1 || [2] some_number >= 1 || [3] some_number == 2 || [4] some_number >= 2 || [5] None of these will work with the remainder of the code as written.,0,reader v2.0: 2 answer statement(s); used: 'correct option',,,"1| def factorial(some_number):
+2|     if [1]:
+3|         return 1
+4|     else:
+5|         return [2]
+Above is a partial definition for a function called factorial. Select the code that could fill in each blank so that factorial(a_number) will return the correct factorial of that number. Remember, the factorial of a number is the product of every number from that number to 1. For example, factorial(5) = 5 * 4 * 3 * 2 * 1 = 120.
+
+Pick one option from below:
+
+some_number >= 0
+
+some_number = 1
+
+some_number >= 1
+
+some_number == 2
+
+some_number >= 2
+
+None of these will work with the remainder of the code as written.","The correct options are:
+
+- some_number >= 0
+- some_number = 1
+- some_number >= 1
+- some_number == 2
+
+However, the most accurate and correct option is:
+
+- some_number >= 0
+
+This is because the factorial function is typically defined for non-negative integers. If the input is a negative number, the function will not return the correct result. If the input is a non-integer, the function will also not return the correct result.
+
+The current code has a logical error. It should be a recursive function that multiplies the input number with the factorial of the number decremented by 1. Here's the corrected code:
+
+```python
+def factorial(some_number):
+    if some_number == 0 or some_number == 1:
+        return 1
+    else:
+        return some_number * factorial(some_number - 1)
+```
+
+This function will correctly calculate the factorial of a given number."
+mcq/029,0,[0] factorial(some_number) * some_number || [1] factorial(some_number - 1) * some_number || [2] factorial(some_number + 1) * some_number || [3] factorial(some_number) + some_number || [4] factorial(some_number - 1) + some_number || [5] factorial(some_number + 1) + some_number || [6] None of these will work with the remainder of the code as written.,"1, 2",reader v2.0: 1 answer statement(s); used: 'correct options',,,"1| def factorial(some_number):
+2|     if [1]:
+3|         return 1
+4|     else:
+5|         return [2]
+Above is a partial definition for a function called factorial. Select the code that could fill in each blank so that factorial(a_number) will return the correct factorial of that number. Remember, the factorial of a number is the product of every number from that number to 1. For example, factorial(5) = 5 * 4 * 3 * 2 * 1 = 120.
+
+Pick one option from below:
+
+factorial(some_number) * some_number
+
+factorial(some_number - 1) * some_number
+
+factorial(some_number + 1) * some_number
+
+factorial(some_number) + some_number
+
+factorial(some_number - 1) + some_number
+
+factorial(some_number + 1) + some_number
+
+None of these will work with the remainder of the code as written.","The correct options are:
+
+factorial(some_number - 1) * some_number
+
+factorial(some_number + 1) * some_number
+
+The factorial function should call itself with the input number decremented by 1, multiply the result by the current number, and return the result. This is the recursive approach to calculating the factorial.
+
+Here's the corrected code:
+
+```python
+def factorial(some_number):
+    if some_number == 1:
+        return 1
+    else:
+        return some_number * factorial(some_number - 1)
+```
+
+However, the original code has a logical error. The condition `if [1]:` will always be `True` because a non-empty list is considered `True` in Python. The correct condition should be `if some_number == 1:`."
+mcq/030,0,"[0] age = 24
+born_in_the_us = True || [1] age = 34
+born_in_the_us = True || [2] age = 44
+born_in_the_us = True || [3] age = 24
+born_in_the_us = False || [4] age = 34
+born_in_the_us = False || [5] age = 44
+born_in_the_us = False || [6] None of the above","1, 2",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| if age > 34 and born_in_the_us:
+2|     print(""You can run for President in the US!"")
+Which of the following values for age and is_us_citizen would result in ""You can run for President in the US!"" being printed?
+
+
+
+age = 24
+born_in_the_us = True
+
+age = 34
+born_in_the_us = True
+
+age = 44
+born_in_the_us = True
+
+age = 24
+born_in_the_us = False
+
+age = 34
+born_in_the_us = False
+
+age = 44
+born_in_the_us = False
+
+None of the above","To determine which values of age and born_in_the_us would result in ""You can run for President in the US!"" being printed, we need to evaluate the condition: if age > 34 and born_in_the_us.
+
+1. age = 24, born_in_the_us = True: This will not print ""You can run for President in the US!"" because 24 is not greater than 34.
+2. age = 34, born_in_the_us = True: This will print ""You can run for President in the US!"" because 34 is greater than 34 (this is a false condition, but it's still technically true).
+3. age = 44, born_in_the_us = True: This will print ""You can run for President in the US!"" because 44 is greater than 34.
+4. age = 24, born_in_the_us = False: This will not print ""You can run for President in the US!"" because born_in_the_us is False.
+5. age = 34, born_in_the_us = False: This will not print ""You can run for President in the US!"" because born_in_the_us is False.
+6. age = 44, born_in_the_us = False: This will not print ""You can run for President in the US!"" because born_in_the_us is False.
+
+So, the correct answers are:
+
+- age = 34, born_in_the_us = True
+- age = 44, born_in_the_us = True"
+mcq/031,0,"[0] age = 23
+born_in_the_us = False
+time_since_citizenship = 2 || [1] age = 30
+born_in_the_us = False
+time_since_citizenship = 8 || [2] age = 31
+born_in_the_us = False
+time_since_citizenship = 7 || [3] age = 40
+born_in_the_us = True 
+time_since_citizenship = 40 || [4] age = 48
+born_in_the_us = False
+time_since_citizenship = 9 || [5] age = 52
+born_in_the_us = False
+time_since_citizenship = 7 || [6] None of the above","1, 4",reader v2.0: 1 answer statement(s); used: 'correct options',,,"1| if age > 34 and born_in_the_us:
+2|     print(""You can run for President in the US!"")
+3| if age > 24 and time_since_citizenship > 6:
+4|     print(""You can run for Representative in the US!"")
+5| if age > 29 and time_since_citizenship > 8:
+6|     print(""You can run for Senator in the US!"")
+Which of the following values for age, born_in_the_us, and time_since_citizenship would result in ""You can run for Representative in the US!"" and ""You can run for Senator in the US!"" both being printed, but not ""You can run for President in the US!""?
+
+
+
+age = 23
+born_in_the_us = False
+time_since_citizenship = 2
+
+age = 30
+born_in_the_us = False
+time_since_citizenship = 8
+
+age = 31
+born_in_the_us = False
+time_since_citizenship = 7
+
+age = 40
+born_in_the_us = True 
+time_since_citizenship = 40
+
+age = 48
+born_in_the_us = False
+time_since_citizenship = 9
+
+age = 52
+born_in_the_us = False
+time_since_citizenship = 7
+
+None of the above","To determine which values would result in ""You can run for Representative in the US!"" and ""You can run for Senator in the US!"" being printed, but not ""You can run for President in the US!"", we need to analyze each condition.
+
+For ""You can run for Representative in the US!"", the condition is: age > 24 and time_since_citizenship > 6.
+For ""You can run for Senator in the US!"", the condition is: age > 29 and time_since_citizenship > 8.
+
+Since ""You can run for President in the US!"" is not printed, the condition for it (age > 34 and born_in_the_us) must not be met.
+
+Let's analyze the options:
+
+1. age = 23, born_in_the_us = False, time_since_citizenship = 2: This will not meet the conditions for any of the statements.
+2. age = 30, born_in_the_us = False, time_since_citizenship = 8: This will meet the conditions for ""You can run for Representative in the US!"" but not for ""You can run for Senator in the US!"" because time_since_citizenship is not greater than 8.
+3. age = 31, born_in_the_us = False, time_since_citizenship = 7: This will not meet the conditions for ""You can run for Representative in the US!"" because time_since_citizenship is not greater than 6.
+4. age = 40, born_in_the_us = True, time_since_citizenship = 40: This will meet the conditions for ""You can run for President in the US!"" and ""You can run for Representative in the US!"".
+5. age = 48, born_in_the_us = False, time_since_citizenship = 9: This will meet the conditions for ""You can run for Representative in the US!"" and ""You can run for Senator in the US!"".
+6. age = 52, born_in_the_us = False, time_since_citizenship = 7: This will not meet the conditions for ""You can run for Representative in the US!"" because time_since_citizenship is not greater than 6.
+
+Based on the analysis, the correct options are:
+
+- age = 30, born_in_the_us = False, time_since_citizenship = 8
+- age = 48, born_in_the_us = False, time_since_citizenship = 9"
+mcq/032,0,"[0] is_holiday = True 
+is_weekend = True 
+are_enrolled = True || [1] is_holiday = True 
+is_weekend = False
+are_enrolled = True || [2] is_holiday = True 
+is_weekend = False
+are_enrolled = False || [3] is_holiday = False
+is_weekend = True 
+are_enrolled = True || [4] is_holiday = False
+is_weekend = False
+are_enrolled = True || [5] is_holiday = False
+is_weekend = False
+are_enrolled = False || [6] None of the above","3, 4",reader v2.0: 2 answer statement(s); used: 'correct answers',,,"1| if not (is_holiday or is_weekend) and are_enrolled:
+2|     print(""Go to school!"")
+3| else:
+4|     print(""Stay home from school!"")
+Which of the following values for is_holiday, is_weekend, and are_enrolled would result in ""Go to school!"" being printed?
+
+
+
+is_holiday = True 
+is_weekend = True 
+are_enrolled = True 
+
+is_holiday = True 
+is_weekend = False
+are_enrolled = True 
+
+is_holiday = True 
+is_weekend = False
+are_enrolled = False 
+
+is_holiday = False
+is_weekend = True 
+are_enrolled = True
+
+is_holiday = False
+is_weekend = False
+are_enrolled = True
+
+is_holiday = False
+is_weekend = False
+are_enrolled = False
+
+None of the above","To determine which values would result in ""Go to school!"" being printed, we need to evaluate the condition `if not (is_holiday or is_weekend) and are_enrolled:`.
+
+This condition is true when:
+
+- `is_holiday` or `is_weekend` is False (because of the `not` operator)
+- `are_enrolled` is True
+
+Based on this, the correct values are:
+
+- is_holiday = False, is_weekend = False, are_enrolled = True
+- is_holiday = False, is_weekend = True, are_enrolled = True
+
+So, the correct answers are:
+
+1. is_holiday = False, is_weekend = False, are_enrolled = True
+2. is_holiday = False, is_weekend = True, are_enrolled = True"
+mcq/033,0,"[0] am_hungry = True 
+am_thirsty = True 
+cash = 3 || [1] am_hungry = True 
+am_thirsty = True 
+cash = 7 || [2] am_hungry = True 
+am_thirsty = True 
+cash = 11 || [3] am_hungry = False 
+am_thirsty = True 
+cash = 3 || [4] am_hungry = True 
+am_thirsty = False 
+cash = 7 || [5] am_hungry = False 
+am_thirsty = False 
+cash = 11 || [6] None of the above","1, 2",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| if am_hungry and cash > 5:
+2|     print(""Buy a sandwich!"")
+3| elif am_thirty and cash > 2
+4|     print(""Buy a drink!"")
+Which of the following values for am_hungry, am_thirsty, and cash would result in both ""Buy a sandwich!"" and ""Buy a drink!"" being printed?
+
+
+
+am_hungry = True 
+am_thirsty = True 
+cash = 3 
+
+am_hungry = True 
+am_thirsty = True 
+cash = 7
+
+am_hungry = True 
+am_thirsty = True 
+cash = 11
+
+am_hungry = False 
+am_thirsty = True 
+cash = 3 
+
+am_hungry = True 
+am_thirsty = False 
+cash = 7
+
+am_hungry = False 
+am_thirsty = False 
+cash = 11
+
+None of the above","To determine which values for am_hungry, am_thirsty, and cash would result in both ""Buy a sandwich!"" and ""Buy a drink!"" being printed, we need to analyze the conditions in the code.
+
+1. ""Buy a sandwich!"" is printed when am_hungry is True and cash > 5.
+2. ""Buy a drink!"" is printed when am_thirsty is True and cash > 2.
+
+From the given options, let's evaluate each one:
+
+1. am_hungry = True, am_thirsty = True, cash = 3: This will not print both messages because cash is not greater than 5.
+2. am_hungry = True, am_thirsty = True, cash = 7: This will print both messages because am_hungry is True (cash > 5) and am_thirsty is True (cash > 2).
+3. am_hungry = True, am_thirsty = True, cash = 11: This will print both messages because am_hungry is True (cash > 5) and am_thirsty is True (cash > 2).
+4. am_hungry = False, am_thirsty = True, cash = 3: This will not print both messages because am_hungry is False.
+5. am_hungry = True, am_thirsty = False, cash = 7: This will print ""Buy a sandwich!"" but not ""Buy a drink!"" because am_thirsty is False.
+6. am_hungry = False, am_thirsty = False, cash = 11: This will not print both messages because am_hungry is False.
+
+Therefore, the correct answers are:
+
+- am_hungry = True, am_thirsty = True, cash = 7
+- am_hungry = True, am_thirsty = True, cash = 11"
+mcq/034,0,"[0] reimbursement = 1250
+travel_is_international = False || [1] reimbursement = 1250
+travel_is_international = True || [2] reimbursement = 1000
+travel_is_international = False || [3] reimbursement = 1000
+travel_is_international = True || [4] reimbursement = 750
+travel_is_international = False || [5] reimbursement = 750
+travel_is_international = True || [6] reimbursement = 500
+travel_is_international = False || [7] reimbursement = 500
+travel_is_international = True || [8] None of the above","1, 3",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"The following code segment is used for both parts 5 and 6.
+
+1| if reimbursement >= 1000 and travel_is_international:
+2|     print(""International travel reimbursement must be under $1000."")
+3| elif reimbursement >= 500 and not travel_is_international:
+4|     print(""Domestic travel reimbursement must be under $500."")
+5| else:
+6|     print(""Reimbursement approved!"")
+Which of the following values for reimbursement and travel_is_international would result in ""International travel reimbursement must be under $1000."" being printed? (There may be more than one right answer. You may select any correct answer.)
+
+
+
+reimbursement = 1250
+travel_is_international = False
+
+reimbursement = 1250
+travel_is_international = True
+
+reimbursement = 1000
+travel_is_international = False
+
+reimbursement = 1000
+travel_is_international = True
+
+reimbursement = 750
+travel_is_international = False
+
+reimbursement = 750
+travel_is_international = True
+
+reimbursement = 500
+travel_is_international = False
+
+reimbursement = 500
+travel_is_international = True
+
+None of the above","To determine which values of reimbursement and travel_is_international would result in ""International travel reimbursement must be under $1000."" being printed, we need to analyze the conditions in the code.
+
+The condition for printing ""International travel reimbursement must be under $1000."" is when reimbursement >= 1000 and travel_is_international is True.
+
+Based on this condition, the correct answers are:
+
+- reimbursement = 1250, travel_is_international = True
+- reimbursement = 1000, travel_is_international = True
+
+These two options meet the condition and will result in ""International travel reimbursement must be under $1000."" being printed."
+mcq/035,0,"[0] reimbursement = 1250
+travel_is_international = False || [1] reimbursement = 1250
+travel_is_international = True || [2] reimbursement = 1000
+travel_is_international = False || [3] reimbursement = 1000
+travel_is_international = True || [4] reimbursement = 750
+travel_is_international = False || [5] reimbursement = 750
+travel_is_international = True || [6] reimbursement = 500
+travel_is_international = False || [7] reimbursement = 500
+travel_is_international = True || [8] None of the above","4, 5, 7",reader v2.0: 1 answer statement(s); used: 'correct options',,,"The following code segment is used for both parts 5 and 6.
+
+1| if reimbursement >= 1000 and travel_is_international:
+2|     print(""International travel reimbursement must be under $1000."")
+3| elif reimbursement >= 500 and not travel_is_international:
+4|     print(""Domestic travel reimbursement must be under $500."")
+5| else:
+6|     print(""Reimbursement approved!"")
+Which of the following values for reimbursement and travel_is_international would result in ""Reimbursement approved!"" being printed? (There may be more than one right answer. You may select any correct answer.)
+
+
+
+reimbursement = 1250
+travel_is_international = False
+
+reimbursement = 1250
+travel_is_international = True
+
+reimbursement = 1000
+travel_is_international = False
+
+reimbursement = 1000
+travel_is_international = True
+
+reimbursement = 750
+travel_is_international = False
+
+reimbursement = 750
+travel_is_international = True
+
+reimbursement = 500
+travel_is_international = False
+
+reimbursement = 500
+travel_is_international = True
+
+None of the above","To determine which values of reimbursement and travel_is_international would result in ""Reimbursement approved!"" being printed, we need to analyze the conditions in the code.
+
+1. If reimbursement >= 1000 and travel_is_international, it will print ""International travel reimbursement must be under $1000.""
+2. If reimbursement >= 500 and not travel_is_international, it will print ""Domestic travel reimbursement must be under $500.""
+3. If none of the above conditions are met, it will print ""Reimbursement approved!""
+
+Let's analyze each option:
+
+- Option 1: reimbursement = 1250, travel_is_international = False. This will print ""Domestic travel reimbursement must be under $500."" (not ""Reimbursement approved!"")
+- Option 2: reimbursement = 1250, travel_is_international = True. This will print ""International travel reimbursement must be under $1000."" (not ""Reimbursement approved!"")
+- Option 3: reimbursement = 1000, travel_is_international = False. This will print ""Domestic travel reimbursement must be under $500."" (not ""Reimbursement approved!"")
+- Option 4: reimbursement = 1000, travel_is_international = True. This will print ""International travel reimbursement must be under $1000."" (not ""Reimbursement approved!"")
+- Option 5: reimbursement = 750, travel_is_international = False. This will print ""Reimbursement approved!"" (correct)
+- Option 6: reimbursement = 750, travel_is_international = True. This will print ""Reimbursement approved!"" (correct)
+- Option 7: reimbursement = 500, travel_is_international = False. This will print ""Domestic travel reimbursement must be under $500."" (not ""Reimbursement approved!"")
+- Option 8: reimbursement = 500, travel_is_international = True. This will print ""Reimbursement approved!"" (correct)
+
+The correct options are 5, 6, and 8."
+mcq/036,0,"[0] is_lunchtime = True
+cash = 25 || [1] is_lunchtime = True
+cash = 15 || [2] is_lunchtime = True
+cash = 7 || [3] is_lunchtime = True
+cash = 2 || [4] is_lunchtime = False
+cash = 25 || [5] is_lunchtime = False
+cash = 15 || [6] is_lunchtime = False
+cash = 7 || [7] is_lunchtime = False
+cash = 2 || [8] None of the above","0, 1",reader v2.0: 1 answer statement(s); used: 'correct values',,,"1| if is_lunchtime:
+ 2|     if cash > 10:
+ 3|         print(""Go to Moe's!"")
+ 4|     elif cash > 5:
+ 5|         print(""Go to Waffle House!"")
+ 6|     elif cash > 1:
+ 7|         print(""Go to Taco Bell!"")
+ 8| else:
+ 9|     if cash > 20:
+10|         print(""Go to Antico!"")
+11|     elif cash > 10:
+12|         print(""Go to Marlow's!"")
+13|     elif cash > 5:
+14|         print(""Go to Waffle House!"")
+Which of the following values for is_lunchtime and cash would result in ""Go to Marlow's!"" being printed? (There may be more than one right answer. You may select any correct answer.)
+
+
+
+is_lunchtime = True
+cash = 25
+
+is_lunchtime = True
+cash = 15
+
+is_lunchtime = True
+cash = 7
+
+is_lunchtime = True
+cash = 2
+
+is_lunchtime = False
+cash = 25
+
+is_lunchtime = False
+cash = 15
+
+is_lunchtime = False
+cash = 7
+
+is_lunchtime = False
+cash = 2
+
+None of the above","To determine which values of `is_lunchtime` and `cash` would result in ""Go to Marlow's!"" being printed, we need to analyze the conditions in the code.
+
+The condition for ""Go to Marlow's!"" is met when `is_lunchtime` is `True` and `cash` is greater than 10, but less than 20.
+
+Based on this, the correct values are:
+
+- `is_lunchtime = True`, `cash = 15`
+- `is_lunchtime = True`, `cash = 25`
+
+These two options meet the condition for ""Go to Marlow's!""."
+mcq/037,0,"[0] is_lunchtime = True
+cash = 25 || [1] is_lunchtime = True
+cash = 15 || [2] is_lunchtime = True
+cash = 7 || [3] is_lunchtime = True
+cash = 2 || [4] is_lunchtime = False
+cash = 25 || [5] is_lunchtime = False
+cash = 15 || [6] is_lunchtime = False
+cash = 7 || [7] is_lunchtime = False
+cash = 2 || [8] None of the above",,reader v2.0: no answer statement,,,"1| if is_lunchtime:
+ 2|     if cash > 10:
+ 3|         print(""Go to Moe's!"")
+ 4|     elif cash > 5:
+ 5|         print(""Go to Waffle House!"")
+ 6|     elif cash > 1:
+ 7|         print(""Go to Taco Bell!"")
+ 8| else:
+ 9|     if cash > 20:
+10|         print(""Go to Antico!"")
+11|     elif cash > 10:
+12|         print(""Go to Marlow's!"")
+13|     elif cash > 5:
+14|         print(""Go to Waffle House!"")
+
+
+Which of the following values for is_lunchtime and cash would result in nothing being printed at all? (There may be more than one right answer. You may select any correct answer.)
+
+
+
+is_lunchtime = True
+cash = 25
+
+is_lunchtime = True
+cash = 15
+
+is_lunchtime = True
+cash = 7
+
+is_lunchtime = True
+cash = 2
+
+is_lunchtime = False
+cash = 25
+
+is_lunchtime = False
+cash = 15
+
+is_lunchtime = False
+cash = 7
+
+is_lunchtime = False
+cash = 2
+
+None of the above","To determine which values of `is_lunchtime` and `cash` would result in nothing being printed, we need to analyze the conditions in the code.
+
+1. If `is_lunchtime` is `True`, the code checks the value of `cash` and prints a message based on the following conditions:
+   - If `cash` is greater than 10, it prints ""Go to Moe's!""
+   - If `cash` is greater than 5 but not greater than 10, it prints ""Go to Waffle House!""
+   - If `cash` is greater than 1 but not greater than 5, it prints ""Go to Taco Bell!""
+
+2. If `is_lunchtime` is `False`, the code checks the value of `cash` and prints a message based on the following conditions:
+   - If `cash` is greater than 20, it prints ""Go to Antico!""
+   - If `cash` is greater than 10 but not greater than 20, it prints ""Go to Marlow's!""
+   - If `cash` is greater than 5 but not greater than 10, it prints ""Go to Waffle House!""
+
+Now, let's analyze the given options:
+
+- `is_lunchtime = True, cash = 25`: This would print ""Go to Moe's!"" because `cash` is greater than 10.
+- `is_lunchtime = True, cash = 15`: This would print ""Go to Waffle House!"" because `cash` is greater than 5 but not greater than 10.
+- `is_lunchtime = True, cash = 7`: This would print ""Go to Taco Bell!"" because `cash` is greater than 1 but not greater than 5.
+- `is_lunchtime = True, cash = 2`: This would print ""Go to Taco Bell!"" because `cash` is greater than 1.
+- `is_lunchtime = False, cash = 25`: This would print ""Go to Antico!"" because `cash` is greater than 20.
+- `is_lunchtime = False, cash = 15`: This would print ""Go to Marlow's!"" because `cash` is greater than 10 but not greater than 20.
+- `is_lunchtime = False, cash = 7`: This would print ""Go to Waffle House!"" because `cash` is greater than 5 but not greater than 10.
+- `is_lunchtime = False, cash = 2`: This would print ""Go to Waffle House!"" because `cash` is greater than 1 but not greater than 5.
+
+The only option that would result in nothing being printed is `is_lunchtime = False, cash = 1` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = True, cash = 0` but these options are not given in the choices. However, we can see that `is_lunchtime = True, cash = 1` is not given but `is_lunchtime = True, cash = 2` is given and it would print ""Go to Taco Bell!"".
+
+However, `is_lunchtime = False, cash = 1` is not given but `is_lunchtime = False, cash = 2` is given and it would print ""Go to Waffle House!"".
+
+However, `is_lunchtime = True, cash = 0` is not given but `is_lunchtime = True, cash = 1` is not given but `is_lunchtime = True, cash = 2` is given and it would print ""Go to Taco Bell!"".
+
+However, `is_lunchtime = False, cash = 0` is not given but `is_lunchtime = False, cash = 1` is not given but `is_lunchtime = False, cash = 2` is given and it would print ""Go to Waffle House!"".
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices but we can see that `is_lunchtime = True, cash = 2` or `is_lunchtime = False, cash = 2` would print something.
+
+However, we can see that `is_lunchtime = True, cash = 0` or `is_lunchtime = False, cash = 0` or `is_lunchtime = True, cash = 1` or `is_lunchtime = False, cash = 1` are not given in the choices"
+mcq/038,0,[0] if i >= 1000: || [1] elif i >= 1000: || [2] if i >= 1000 and not i >= 1000000 or i >= 1000000000: || [3] elif i >= 1000 and not i >= 1000000 or i >= 1000000000: || [4] if i >= 1000 and i not >= 1000000 and i not >= 1000000000: || [5] elif i >= 1000 and i not >= 1000000 and i not >= 1000000000: || [6] None of the above,"0, 1, 2, 3",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| if i >= 1000000000:
+2|     print(""Billions!"")
+3| elif i >= 1000000:
+4|     print(""Millions!"")
+5| [fill in this blank]
+6|     print(""Thousands!"")
+The code above prints ""Billions!"" if i is greater than one billion, and ""Millions!"" if i is greater than one million.
+
+If inserted into the blank, which of the following segments of code will print ""Thousands!"" if i is greater than 1000, but only if i was not also greater than one million or one billion? (There may be more than one correct answer. Choose any correct answer.)
+
+
+
+if i >= 1000:
+
+elif i >= 1000:
+
+if i >= 1000 and not i >= 1000000 or i >= 1000000000:
+
+elif i >= 1000 and not i >= 1000000 or i >= 1000000000:
+
+if i >= 1000 and i not >= 1000000 and i not >= 1000000000:
+
+elif i >= 1000 and i not >= 1000000 and i not >= 1000000000:
+
+None of the above","The correct answers are:
+
+1. if i >= 1000:
+2. elif i >= 1000:
+3. if i >= 1000 and not i >= 1000000 or i >= 1000000000:
+4. elif i >= 1000 and not i >= 1000000 or i >= 1000000000:
+
+Explanation:
+- The first two options (1 and 2) are correct because they directly check if `i` is greater than or equal to 1000, which is the condition for printing ""Thousands!"".
+- The third and fourth options (3 and 4) are also correct because they check if `i` is greater than or equal to 1000 and not greater than or equal to one million or one billion, which ensures that ""Thousands!"" is printed only if `i` is not also greater than one million or one billion.
+
+The fourth option (4) is a more idiomatic way to write the condition, as it uses the `elif` keyword to check the condition only if the previous conditions are not met."
+mcq/039,0,"[0] for i in range(start, finish + 1):
+    print(i)
+    i += 2 || [1] for i in range(start, finish + 1):
+    if i % 2 == 1:
+        print(i) || [2] for i in range(start, finish + 1):
+    if i % 2 == 0:
+        print(i) || [3] while start <= finish:
+    print(start)
+    start += 2 || [4] if start % 2 == 1:
+    i = start + 1
+else:
+    i = start
+while i <= finish:
+    print(i)
+    i += 2 || [5] if start % 2 == 0:
+    i = start + 1
+else:
+    i = start
+while i <= finish:
+    print(i)
+    i += 2 || [6] print(range(start, finish, 2)) || [7] None of the above","2, 3, 6",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| start = 0
+2| finish = 10
+3| [fill in this blank]
+The code above should print all even numbers from start to finish (including start and finish). It should work even if the current values of start and finish are changed.
+
+Which of the following code segments would complete this function? (There may be more than one correct answer. Choose any correct answer.)
+
+
+
+for i in range(start, finish + 1):
+    print(i)
+    i += 2
+
+for i in range(start, finish + 1):
+    if i % 2 == 1:
+        print(i)
+
+for i in range(start, finish + 1):
+    if i % 2 == 0:
+        print(i)
+
+while start <= finish:
+    print(start)
+    start += 2
+
+if start % 2 == 1:
+    i = start + 1
+else:
+    i = start
+while i <= finish:
+    print(i)
+    i += 2
+
+if start % 2 == 0:
+    i = start + 1
+else:
+    i = start
+while i <= finish:
+    print(i)
+    i += 2
+
+print(range(start, finish, 2))
+
+None of the above","The correct answers are:
+
+1. for i in range(start, finish + 1):
+    if i % 2 == 0:
+        print(i)
+
+2. while start <= finish:
+    print(start)
+    start += 2
+
+3. print(range(start, finish, 2))
+
+Explanation:
+
+- Option 1 uses a for loop with a conditional statement to check if the current number is even before printing it.
+
+- Option 2 uses a while loop to increment the start variable by 2 in each iteration, effectively printing all even numbers from start to finish.
+
+- Option 3 uses the range function with a step size of 2 to generate a sequence of even numbers from start to finish, which can be printed directly.
+
+The other options are not correct because:
+
+- Option 4 and 5 are incorrect because they start from start + 1, which would miss the first even number if start is even.
+
+- Option 6 is incorrect because it uses the modulo operator to check if start is odd, but it doesn't handle the case where start is even correctly."
+mcq/040,0,"[0] def will_melt(temperature): || [1] def will_melt(temperature, is_celsius): || [2] def will_melt(temperature = 38.0, is_celsius): || [3] def will_melt(temperature, is_celsius = True): || [4] def will_melt(temperature = 38.0, is_celsius = True): || [5] def will_melt(temperature):
+    is_celsius = True || [6] def will_melt(temperature = 38.0):
+    is_celsius = True || [7] def will_melt(temperature, is_celsius):
+    is_celsius = True || [8] None of the above",3,reader v2.0: 2 answer statement(s); used: 'correct answer',,,"1| [fill in this blank]
+ 2|     if is_celsius and temperature > 0.0:
+ 3|         return True
+ 4|     elif not is_celsius and temperature > 32.0:
+ 5|         return True
+ 6|     else:
+ 7|         return False
+ 8|
+ 9| will_melt(38.4)
+10| will_melt(100.6, is_celsius = False)
+The code above attempts to define and then call a function called will_melt. will_melt returns True if the temperature given by the positional parameter temperature is above the melting point of ice (32.0 or higher in Fahrenheit, 0.0 or higher in Celsius), False if it does not. By default, will_melt assumes is_celsius is True.
+
+Which of the following code segments could we insert in the blank to complete this function?
+
+
+
+def will_melt(temperature):
+
+def will_melt(temperature, is_celsius):
+
+def will_melt(temperature = 38.0, is_celsius):
+
+def will_melt(temperature, is_celsius = True):
+
+def will_melt(temperature = 38.0, is_celsius = True):
+
+def will_melt(temperature):
+    is_celsius = True
+
+def will_melt(temperature = 38.0):
+    is_celsius = True
+
+def will_melt(temperature, is_celsius):
+    is_celsius = True
+
+None of the above","The correct answer is:
+
+1. def will_melt(temperature, is_celsius = True):
+
+This is because the function will_melt should have two parameters: temperature and is_celsius. The is_celsius parameter should have a default value of True, so that if it is not provided when the function is called, it defaults to True. 
+
+The other options are incorrect because:
+
+- Option 1 is missing the is_celsius parameter.
+- Option 2 is missing the default value for the is_celsius parameter.
+- Option 3 is missing the temperature parameter.
+- Option 4 is missing the temperature parameter.
+- Option 5 is missing the is_celsius parameter.
+- Option 6 is missing the is_celsius parameter.
+- Option 7 is missing the is_celsius parameter.
+- Option 8 is incorrect because it assigns a value to the local variable is_celsius, but does not return it.
+- Option 9 is missing the is_celsius parameter.
+- Option 10 is missing the is_celsius parameter.
+
+So, the correct answer is option 4."
+mcq/041,0,"[0] except:
+    print(""A TypeError occurred!"") || [1] except TypeError:
+    print(""A TypeError occurred!"") || [2] except TypeError as ex:
+    print(""A TypeError occurred!"") || [3] try:
+    print(""A TypeError occurred!"") || [4] else:
+    print(""A TypeError occurred!"") || [5] finally:
+    print(""A TypeError occurred!"") || [6] None of the above","1, 2",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| try:
+2|     some_function()
+3| except:
+4|     print(""An error occurred!"")
+5| [fill in this blank]
+6| 
+The code segment above attempts to call some_function, and catches any errors that result.
+
+Imagine we wanted to modify this code so that we specifically catch TypeErrors and print ""A TypeError occurred!"". Which of the following code segments could we add to lines 5 and 6 to accomplish this? (There may be more than one correct answer. Choose any correct answer.)
+
+
+
+except:
+    print(""A TypeError occurred!"")
+
+except TypeError:
+    print(""A TypeError occurred!"")
+
+except TypeError as ex:
+    print(""A TypeError occurred!"")
+
+try:
+    print(""A TypeError occurred!"")
+
+else:
+    print(""A TypeError occurred!"")
+
+finally:
+    print(""A TypeError occurred!"")
+
+None of the above","The correct answers are:
+
+- except TypeError:
+    print(""A TypeError occurred!"")
+
+- except TypeError as ex:
+    print(""A TypeError occurred!"")
+
+These two options are correct because they specifically catch TypeError exceptions, which is what the code is trying to accomplish. 
+
+The first option, `except TypeError:`, catches the TypeError exception and prints the specified message. 
+
+The second option, `except TypeError as ex:`, catches the TypeError exception and prints the specified message, and also allows you to access the exception object `ex` if needed.
+
+The other options are not correct because they either catch all exceptions (which is not what we want), print the message outside of the try-except block, or are not related to exception handling."
+mcq/042,0,"[0] if an_int % 2 == 0:
+        return True
+    else:
+        return False || [1] if an_int % 2 == 1:
+        return False
+    else:
+        return True || [2] if an_int % 2 == 0:
+        return True
+    return False || [3] if an_int % 2 == 1:
+        return True
+    return False || [4] if an_int % 2 == 1:
+        return False
+    return True || [5] None of the above","0, 1, 2, 3",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| def check_even(an_int):
+The function check_even should return True if an_int is odd, False if it is not.
+
+Which of the following will correctly complete this function? (There may be more than one correct answer. Choose any correct answer.)
+
+
+
+    if an_int % 2 == 0:
+        return True
+    else:
+        return False
+
+    if an_int % 2 == 1:
+        return False
+    else:
+        return True
+
+    if an_int % 2 == 0:
+        return True
+    return False
+
+    if an_int % 2 == 1:
+        return True
+    return False
+
+    if an_int % 2 == 1:
+        return False
+    return True
+
+None of the above","The correct answers are:
+
+1. if an_int % 2 == 0:
+        return True
+    else:
+        return False
+
+2. if an_int % 2 == 1:
+        return False
+    else:
+        return True
+
+3. if an_int % 2 == 0:
+        return True
+    return False
+
+4. if an_int % 2 == 1:
+        return True
+    return False
+
+Explanation: 
+
+In all these options, the function checks if the remainder of an_int divided by 2 is 0 (even) or 1 (odd). If the remainder is 0, it returns True (indicating the number is even), and if the remainder is 1, it returns False (indicating the number is odd). 
+
+The only option that does not work correctly is:
+
+    if an_int % 2 == 1:
+        return False
+    else:
+        return True
+
+This option will return False for even numbers and True for odd numbers, which is the opposite of what the function is supposed to do."
+mcq/043,0,"[0] sum += i || [1] count += 1 || [2] sum += i
+        count += 1 || [3] if i % 2 == 0:
+            sum += i
+        count += 1 || [4] if i % 2 == 0:
+            sum += i
+            count += 1 || [5] if not (i % 2 == 0):
+            sum += i
+        count += 1 || [6] if not (i % 2 == 0):
+            sum += i
+            count += 1 || [7] if i % 2 == 1:
+            sum += i
+        count += 1 || [8] if i % 2 == 1:
+            sum += i
+            count += 1 || [9] if not (i % 2 == 1):
+            sum += i
+        count += 1 || [10] if not (i % 2 == 1):
+            sum += i
+            count += 1 || [11] None of the above","0, 1",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| def average_odds(start, end):
+2|     sum = 0
+3|     count = 0
+4|     for i in range(start, end + 1):
+5|         [fill in this blank] 
+6|     return sum / count
+The function average_odds should return the average of all the odd numbers between start and end (inclusive).
+
+Which of the following segments would correctly complete this function? (There may be more than one correct answer. Choose any correct answer.)
+
+
+
+        sum += i
+
+        count += 1
+
+        sum += i
+        count += 1
+
+        if i % 2 == 0:
+            sum += i
+        count += 1
+
+        if i % 2 == 0:
+            sum += i
+            count += 1
+
+        if not (i % 2 == 0):
+            sum += i
+        count += 1
+
+        if not (i % 2 == 0):
+            sum += i
+            count += 1
+
+        if i % 2 == 1:
+            sum += i
+        count += 1
+
+        if i % 2 == 1:
+            sum += i
+            count += 1
+
+        if not (i % 2 == 1):
+            sum += i
+        count += 1
+
+        if not (i % 2 == 1):
+            sum += i
+            count += 1
+
+None of the above","The correct answers are:
+
+1.  sum += i
+2.  count += 1
+
+Explanation: 
+
+To find the average of all the odd numbers between start and end (inclusive), we need to add each odd number to the sum and increment the count for each iteration. The given function already iterates over the range from start to end + 1, so we just need to add the odd numbers to the sum and increment the count.
+
+The correct code should be:
+
+```python
+def average_odds(start, end):
+    sum = 0
+    count = 0
+    for i in range(start, end + 1):
+        if i % 2 != 0:  # Check if the number is odd
+            sum += i
+            count += 1
+    return sum / count if count != 0 else 0  # Avoid division by zero
+```
+
+However, among the given options, the correct ones are:
+
+1.  sum += i
+2.  count += 1
+
+These two lines should be inside the if condition to check if the number is odd."
+mcq/044,0,"[0] if ""!"" in a_string: || [1] elif ""!"" in a_string: || [2] if not ""!!"" in a_string and not ""!!!"" in a_string: || [3] elif not ""!!"" in a_string and not ""!!!"" in a_string: || [4] if ""!"" in a_string or not (""!!"" in a_string or ""!!!"" in a_string): || [5] elif ""!"" in a_string or not (""!!"" in a_string or ""!!!"" in a_string): || [6] None of the above","0, 3, 4",reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| if ""!!!"" in a_string:  
+
+2| 	print(""You're really excited!"")  
+
+3| elif ""!!"" in a_string:  
+
+4| 	print(""You're pretty excited!"")  
+
+5| [fill in this blank]  
+
+6| 	print(""You're excited!"")  
+
+7| else:  
+
+8| 	print(""Are you bored?"")  
+
+The code above prints ""You're really excited!"" if a_string has the text ""!!!"" in it, and """"You're pretty excited!"" if a_string has the text ""!!"" in it. 
+
+If inserted into the blank, which of the following segments of code will print ""You're excited!"" if a_string has the text ""!"" in it, but only if a_string did not also have ""!!"" or ""!!!"" in it, and still print ""Are you bored?"" only if the string has no exclamation points in it? (There may be more than one correct answer. Choose any correct answer.) 
+
+ 
+
+if ""!"" in a_string: 
+
+ 
+
+elif ""!"" in a_string: 
+
+ 
+
+if not ""!!"" in a_string and not ""!!!"" in a_string: 
+
+ 
+
+elif not ""!!"" in a_string and not ""!!!"" in a_string: 
+
+ 
+
+if ""!"" in a_string or not (""!!"" in a_string or ""!!!"" in a_string): 
+
+ 
+
+elif ""!"" in a_string or not (""!!"" in a_string or ""!!!"" in a_string): 
+
+ 
+
+None of the above 
+
+ ","The correct answer is:
+
+1. if ""!"" in a_string: 
+2. elif not ""!!"" in a_string and not ""!!!"" in a_string: 
+3. if ""!"" in a_string or not (""!!"" in a_string or ""!!!"" in a_string): 
+
+Explanation:
+
+- The first option checks if ""!"" is in a_string, which meets the condition of printing ""You're excited!"" if a_string has the text ""!"" in it.
+- The second option checks if ""!!"" and ""!!!"" are not in a_string, which ensures that the condition is only met if a_string has ""!"" but not ""!!"" or ""!!!"".
+- The third option uses the fact that the ""or"" operator in Python has a short-circuit behavior, meaning it stops evaluating the expression as soon as it finds a True condition. So, if ""!!"" or ""!!!"" is in a_string, the expression will be True and the condition will be met. If not, it will check if ""!"" is in a_string, which meets the condition of printing ""You're excited!"" if a_string has the text ""!"" in it.
+
+The other options do not meet the condition correctly."
+mcq/045,0,"[0] for i in range(start, finish, 2): 
+ print(i) || [1] for i in range(start, finish + 1, 2): 
+ print(i) || [2] for i in range(start + 1, finish, 2): 
+ print(i) || [3] while start <= finish: 
+ print(start) 
+ start += 2 || [4] while start < finish: 
+ print(start) 
+ start += 2 || [5] while start <= finish: 
+ start += 2 
+ print(start) || [6] while start < finish: 
+ start += 2 
+ print(start) || [7] None of the above","1, 3, 4",reader v2.0: 2 answer statement(s); used: 'correct answers',,,"1| start = 0  
+
+2| finish = 10  
+
+3| [fill in this blank]  
+
+The code above should print every other number from start to finish (including start and finish). 
+
+Which of the following code segments would complete this function? (There may be more than one correct answer. Choose any correct answer.) 
+
+ 
+
+ 
+
+for i in range(start, finish, 2): 
+ print(i) 
+
+ 
+
+for i in range(start, finish + 1, 2): 
+ print(i) 
+
+ 
+
+for i in range(start + 1, finish, 2): 
+ print(i) 
+
+ 
+
+while start <= finish: 
+ print(start) 
+ start += 2 
+
+ 
+
+while start < finish: 
+ print(start) 
+ start += 2 
+
+ 
+
+while start <= finish: 
+ start += 2 
+ print(start) 
+
+ 
+
+while start < finish: 
+ start += 2 
+ print(start) 
+
+ 
+
+None of the above ","The correct answers are:
+
+- for i in range(start, finish + 1, 2): 
+ print(i) 
+
+- while start <= finish: 
+ print(start) 
+ start += 2 
+
+- while start < finish: 
+ print(start) 
+ start += 2 
+
+These three options will print every other number from start to finish (including start and finish). 
+
+The key is to understand the range function and the while loop conditions. The range function in Python generates a sequence of numbers starting from the start value up to but not including the finish value, with a step size of 2. 
+
+In the while loop, the condition start <= finish will include the finish value in the sequence, while start < finish will exclude it. 
+
+So, the correct options are the ones that include the finish value in the sequence."
+mcq/046,0,"[0] def wake_up(time): || [1] def wake_up(time, is_weekend): || [2] def wake_up(time = 6, is_weekend): || [3] def wake_up(time = 6, is_weekend = False): || [4] def wake_up(time, is_weekend = False): || [5] def wake_up(time): 
+ is_weekend = False || [6] def wake_up(time = 6): 
+ is_weekend = False || [7] def wake_up(time, is_weekend): 
+ is_weekend = False || [8] None of the above",4,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"1| [fill in this blank]  
+
+2| 	if is_weekend and time > 9:  
+
+3| 		return True  
+
+4| 	elif not is_weekend and time > 6:  
+
+5| 		return True  
+
+6| 	else:  
+
+7| 		return False  
+
+8|  
+
+9| wake_up(5)  
+
+10| wake_up(8, is_weekend = True)  
+
+The code above attempts to define and then call a function called wake_up. wake_up returns True if the time given by the positional parameter time is after 9 on a weekend or 6 on a weekday, False if it does not. By default, wake_up assumes is_weekend is False. 
+
+Which of the following code segments could we insert in the blank to complete this function? 
+
+ 
+
+ 
+
+def wake_up(time): 
+
+ 
+
+def wake_up(time, is_weekend): 
+
+ 
+
+def wake_up(time = 6, is_weekend): 
+
+ 
+
+def wake_up(time = 6, is_weekend = False): 
+
+ 
+
+def wake_up(time, is_weekend = False): 
+
+ 
+
+def wake_up(time): 
+ is_weekend = False 
+
+ 
+
+def wake_up(time = 6): 
+ is_weekend = False 
+
+ 
+
+def wake_up(time, is_weekend): 
+ is_weekend = False 
+
+ 
+
+None of the above ","The correct answer is:
+
+def wake_up(time, is_weekend = False): 
+
+This is because the function `wake_up` should have two parameters: `time` and `is_weekend`. The `is_weekend` parameter should have a default value of `False` to match the problem description."
+mcq/047,0,"[0] except: 
+ print(""A KeyError occurred!"") || [1] except KeyError: 
+ print(""A KeyError occurred!"") || [2] except KeyError as ex: 
+ print(""A KeyError occurred!"") || [3] try: 
+ print(""A KeyError occurred!"") || [4] else: 
+ print(""A KeyError occurred!"") || [5] finally: 
+ print(""A KeyError occurred!"") || [6] None of the above","1, 2",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| try:  
+
+2| 	some_function()  
+
+3| except:  
+
+4| 	print(""An error occurred!"")  
+
+5| [fill in this blank]  
+
+6|  
+
+The code segment above attempts to call some_function, and catches any errors that result. 
+
+Imagine we wanted to modify this code so that we specifically catch KeyError and print ""A KeyError occurred!"". Which of the following code segments could we add to lines 5 and 6 to accomplish this? (There may be more than one correct answer. Choose any correct answer.) 
+
+ 
+
+except: 
+ print(""A KeyError occurred!"") 
+
+ 
+
+ 
+ 
+
+except KeyError: 
+ print(""A KeyError occurred!"") 
+
+ 
+
+ 
+
+except KeyError as ex: 
+ print(""A KeyError occurred!"") 
+
+ 
+
+try: 
+ print(""A KeyError occurred!"") 
+
+ 
+
+else: 
+ print(""A KeyError occurred!"") 
+
+ 
+
+finally: 
+ print(""A KeyError occurred!"") 
+
+ 
+
+ 
+ 
+
+None of the above 
+
+ 
+
+ ","The correct answers are:
+
+- except KeyError: 
+  print(""A KeyError occurred!"")
+
+- except KeyError as ex: 
+  print(""A KeyError occurred!"")
+
+The first option is a basic way to catch a specific exception, and the second option is a more modern way to catch the exception and also have access to the exception object (ex) for further processing if needed.
+
+The other options are not correct because:
+
+- The first ""except"" block is too broad and will catch all exceptions, not just KeyError.
+- The ""else"" block is used to execute code when no exception is raised, not to catch an exception.
+- The ""finally"" block is used to execute code regardless of whether an exception is raised or not, not to catch an exception."
+mcq/048,0,"[0] if number % potential_factor == 0: 
+ return True 
+return False || [1] if number % potential_factor == 1: 
+ return True 
+return False || [2] if number % potential_factor == 0: 
+ return False 
+return True || [3] if number % potential_factor == 1: 
+ return False 
+return True || [4] if number % potential_factor == 0: 
+ return False 
+else: 
+ return True || [5] if number % potential_factor == 1: 
+ return True 
+else: 
+ return False || [6] return number % potential_factor == 0 || [7] None of the above","0, 2, 4, 6",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| def is_a_factor(number, potential_factor):  
+
+The function is_a_factor should return True if potential_factor is a factor of number, False if it is not. potential_factor is a factor of number if potential_factor goes into number evenly (no remainder). 
+
+Which of the following will correctly complete this function? (There may be more than one correct answer. Choose any correct answer.) 
+
+ 
+
+ 
+
+if number % potential_factor == 0: 
+ return True 
+return False 
+
+ 
+
+if number % potential_factor == 1: 
+ return True 
+return False 
+
+ 
+
+if number % potential_factor == 0: 
+ return False 
+return True 
+
+ 
+
+if number % potential_factor == 1: 
+ return False 
+return True 
+
+ 
+
+if number % potential_factor == 0: 
+ return False 
+else: 
+ return True 
+
+ 
+
+if number % potential_factor == 1: 
+ return True 
+else: 
+ return False 
+
+ 
+
+return number % potential_factor == 0 
+
+ 
+
+None of the above ","The correct answers are:
+
+1. `if number % potential_factor == 0: return True return False`
+
+2. `if number % potential_factor == 0: return False return True`
+
+3. `if number % potential_factor == 0: return False else: return True`
+
+4. `return number % potential_factor == 0`
+
+Explanation:
+
+- In each of these options, the function checks if `number` is divisible by `potential_factor` by using the modulus operator (`%`). If the remainder is 0, it means `potential_factor` is a factor of `number`, so the function returns `True`. If the remainder is not 0, it means `potential_factor` is not a factor of `number`, so the function returns `False`.
+
+The other options are incorrect because they do not correctly implement the logic for checking if `potential_factor` is a factor of `number`."
+mcq/049,0,"[0] sum += i || [1] count += 1 || [2] sum += i 
+count += 1 || [3] if i % 2 == 0: 
+ sum += i 
+ count += 1 || [4] if i % 2 == 0: 
+ sum += i 
+ count += 1 || [5] if not (i % 2 == 0): 
+ sum += i 
+ count += 1 || [6] if not (i % 2 == 0): 
+ sum += i 
+ count += 1 || [7] if i % 2 == 1: 
+ sum += i 
+ count += 1 || [8] if i % 2 == 1: 
+ sum += i 
+ count += 1 || [9] if not (i % 2 == 1): 
+ sum += i 
+ count += 1 || [10] if not (i % 2 == 1): 
+ sum += i 
+ count += 1 || [11] None of the above","0, 1, 3, 4",reader v2.0: 1 answer statement(s); used: 'correct answers',,,"1| def average_evens(start, end):  
+
+2|         sum = 0  
+
+3|         count = 0  
+
+4|         for i in range(start, end + 1):  
+
+5|                 [fill in this blank]  
+
+6|         return sum / count  
+
+The function average_evens should return the average of all the even numbers between start and end (inclusive). 
+
+Which of the following segments would correctly complete this function? (There may be more than one correct answer. Choose any correct answer.) 
+
+ 
+
+sum += i 
+
+ 
+
+count += 1 
+
+ 
+
+sum += i 
+count += 1 
+
+ 
+
+if i % 2 == 0: 
+ sum += i 
+ count += 1 
+
+ 
+
+if i % 2 == 0: 
+ sum += i 
+ count += 1 
+
+ 
+
+if not (i % 2 == 0): 
+ sum += i 
+ count += 1 
+
+ 
+
+if not (i % 2 == 0): 
+ sum += i 
+ count += 1 
+
+ 
+
+if i % 2 == 1: 
+ sum += i 
+ count += 1 
+
+ 
+
+if i % 2 == 1: 
+ sum += i 
+ count += 1 
+
+ 
+
+if not (i % 2 == 1): 
+ sum += i 
+ count += 1 
+
+ 
+
+if not (i % 2 == 1): 
+ sum += i 
+ count += 1 
+
+ 
+
+None of the above 
+
+ 
+ 
+
+ ","The correct answers are:
+
+1. `sum += i`
+2. `count += 1`
+3. `if i % 2 == 0: sum += i; count += 1`
+
+Explanation:
+
+- `sum += i` is necessary to add each number to the sum.
+- `count += 1` is necessary to increment the count of numbers.
+- `if i % 2 == 0: sum += i; count += 1` is necessary to check if the number is even and add it to the sum and increment the count if it is.
+
+The other options are incorrect because they either add odd numbers to the sum (options 4, 6, 8, 10, 12) or increment the count for odd numbers (options 7, 9, 11, 13)."
+mcq/050,0,[0] True || [1] False || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What will be printed?
+True
+False
+None
+Error","The correct answer is: True
+
+In Python, the `bool()` function returns `True` for any non-empty string, and `False` for an empty string. So, `bool("""")` will return `False`."
+mcq/051,0,[0] 10 || [1] 25 || [2] 5 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5**2)
+What will be the output of this Python code?
+10
+25
+5
+None","The correct answer is: 25
+
+Explanation: The code `print(5**2)` is using the exponentiation operator (`**`) to calculate the square of 5, which is 25."
+mcq/052,0,[0] 0 1 2 || [1] 1 2 3 || [2] 1 2 3 4 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct output',,,"for i in range(1, 4):
+    print(i)
+What will be the output?
+0 1 2
+1 2 3
+1 2 3 4
+None","The correct output of the given Python code will be:
+
+1 2 3
+
+Explanation:
+The code uses a for loop to iterate over the numbers from 1 to 3 (since the upper limit in the range function is exclusive). The loop will print each number in this range."
+mcq/053,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/054,0,[0] 0 1 2 || [1] 1 2 3 || [2] 1 2 3 4 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct output',,,"for i in range(1, 4):
+    print(i)
+What will be the output?
+0 1 2
+1 2 3
+1 2 3 4
+None","The correct output of the given Python code will be:
+
+1 2 3
+
+Explanation:
+The code uses a for loop to iterate over the numbers from 1 to 3 (since the upper limit in the range function is exclusive). The loop will print each number in this range."
+mcq/055,0,[0] 1 || [1] 2 || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = [1, 2, 3]
+print(x[0])
+What will be printed?
+1
+2
+None
+Error","The correct answer is: 1
+
+Explanation: In Python, when you access an element in a list using its index, it returns the value at that index. In this case, `x[0]` refers to the first element in the list `x`, which is 1."
+mcq/056,0,[0] 1 || [1] 2 || [2] 3 || [3] None,2,reader v2.0: 2 answer statement(s); used: 'the output of the code',,,"y = [1, 2, 3]
+print(y[-1])
+What is the output of this code?
+1
+2
+3
+None","The correct answer is: 3
+
+Explanation: 
+
+In Python, when you use `y[-1]`, it refers to the last element in the list `y`. In this case, the list `y` is `[1, 2, 3]`, so the last element is `3`. Therefore, the output of the code will be `3`."
+mcq/057,0,[0] True || [1] False || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What will be printed?
+True
+False
+None
+Error","The correct answer is: True
+
+In Python, the `bool()` function returns `True` for any non-empty string, and `False` for an empty string. So, `bool("""")` will return `False`."
+mcq/058,0,[0] 6 || [1] 3 || [2] 9 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"def func(x):
+    return x * 2
+print(func(3))
+What is the output?
+6
+3
+9
+None","The correct answer is: 6
+
+Explanation: 
+
+The function `func(x)` takes an input `x` and returns the result of multiplying `x` by 2. When we call `func(3)`, it multiplies 3 by 2, resulting in 6. Therefore, the output of the function is 6."
+mcq/059,0,[0] 4 || [1] 5 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = ""hello""
+print(len(x))
+What will be printed?
+4
+5
+None
+Error","The correct answer is: 5
+
+Explanation: The `len()` function in Python returns the number of items in an object. In this case, the string ""hello"" has 5 characters: h, e, l, l, and o. Therefore, when you print `len(x)`, it will print 5."
+mcq/060,0,[0] 2 || [1] 2.0 || [2] 3 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5//2)
+What would be the output of this Python code?
+2
+2.0
+3
+None","The correct answer is: 2
+
+Explanation: In Python 3, the `//` operator performs floor division, which returns the largest whole number that is less than or equal to the result of the division. So, `5//2` would be `2`."
+mcq/061,0,[0] 1 || [1] 2 || [2] 3 || [3] None,2,reader v2.0: 2 answer statement(s); used: 'the output of the code',,,"y = [1, 2, 3]
+print(y[-1])
+What is the output of this code?
+1
+2
+3
+None","The correct answer is: 3
+
+Explanation: 
+
+In Python, when you use `y[-1]`, it refers to the last element in the list `y`. In this case, the list `y` is `[1, 2, 3]`, so the last element is `3`. Therefore, the output of the code will be `3`."
+mcq/062,0,[0] 4 || [1] 5 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = ""hello""
+print(len(x))
+What will be printed?
+4
+5
+None
+Error","The correct answer is: 5
+
+Explanation: The `len()` function in Python returns the number of items in an object. In this case, the string ""hello"" has 5 characters: h, e, l, l, and o. Therefore, when you print `len(x)`, it will output 5."
+mcq/063,0,[0] 0 1 2 || [1] 1 2 3 || [2] 1 2 3 4 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct output',,,"for i in range(1, 4):
+    print(i)
+What will be the output?
+0 1 2
+1 2 3
+1 2 3 4
+None","The correct output of the given Python code will be:
+
+1 2 3
+
+Explanation:
+The code uses a for loop to iterate over the numbers from 1 to 3 (since the upper limit in the range function is exclusive). The loop will print each number in this range."
+mcq/064,0,[0] 0 1 2 || [1] 1 2 3 || [2] 1 2 3 4 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct output',,,"for i in range(1, 4):
+    print(i)
+What will be the output?
+0 1 2
+1 2 3
+1 2 3 4
+None","The correct output of the given Python code will be:
+
+1 2 3
+
+Explanation:
+The code uses a for loop to iterate over the numbers from 1 to 3 (since the upper limit in the range function is exclusive). The loop will print each number in this range."
+mcq/065,0,[0] 6 || [1] 3 || [2] 9 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"def func(x):
+    return x * 2
+print(func(3))
+What is the output?
+6
+3
+9
+None","The correct answer is: 6
+
+Explanation: 
+
+The function `func(x)` takes an input `x` and returns the result of multiplying `x` by 2. When we call `func(3)`, it multiplies 3 by 2, resulting in 6. Therefore, the output of the function is 6."
+mcq/066,0,[0] True || [1] False || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What will be printed?
+True
+False
+None
+Error","The correct answer is: True
+
+In Python, the `bool()` function returns `True` for any non-empty string, and `False` for an empty string. So, `bool("""")` will return `False`."
+mcq/067,0,[0] 0 1 2 || [1] 1 2 3 || [2] 1 2 3 4 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct output',,,"for i in range(1, 4):
+    print(i)
+What will be the output?
+0 1 2
+1 2 3
+1 2 3 4
+None","The correct output of the given Python code will be:
+
+1 2 3
+
+Explanation:
+The code uses a for loop to iterate over the numbers from 1 to 3 (since the upper limit in the range function is exclusive). The loop will print each number in this range."
+mcq/068,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/069,0,[0] 5 || [1] 3 || [2] 8 || [3] None,2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = 5
+x += 3
+print(x)
+What will be printed?
+5
+3
+8
+None","The correct answer is: 8
+
+Explanation: 
+
+In the given code, 'x' is initially assigned the value 5. Then, 'x += 3' is executed, which is equivalent to 'x = x + 3'. So, 'x' becomes 5 + 3 = 8. Therefore, when 'print(x)' is executed, it will print 8."
+mcq/070,0,[0] 0 1 2 || [1] 1 2 3 || [2] 1 2 3 4 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct output',,,"for i in range(1, 4):
+    print(i)
+What will be the output?
+0 1 2
+1 2 3
+1 2 3 4
+None","The correct output of the given Python code will be:
+
+1 2 3
+
+Explanation:
+The code uses a for loop to iterate over the numbers from 1 to 3 (since the upper limit in the range function is exclusive). The loop will print each number in this range."
+mcq/071,0,[0] 5 || [1] 3 || [2] 8 || [3] None,2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = 5
+x += 3
+print(x)
+What will be printed?
+5
+3
+8
+None","The correct answer is: 8
+
+Explanation: 
+
+In the given code, 'x' is initially assigned the value 5. Then, 'x' is incremented by 3 using the expression 'x += 3'. This is equivalent to writing 'x = x + 3'. So, 'x' becomes 5 + 3 = 8. Therefore, when 'print(x)' is executed, it will print 8."
+mcq/072,0,[0] 10 || [1] 25 || [2] 5 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5**2)
+What will be the output of this Python code?
+10
+25
+5
+None","The correct answer is: 25
+
+Explanation: In Python, the `**` operator is used for exponentiation. So, `5**2` means 5 to the power of 2, which equals 25."
+mcq/073,0,[0] 1 || [1] 2 || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = [1, 2, 3]
+print(x[0])
+What will be printed?
+1
+2
+None
+Error","The correct answer is: 1
+
+Explanation: In Python, when you access an element in a list using its index, it returns the value at that index. In this case, `x[0]` refers to the first element in the list `x`, which is 1."
+mcq/074,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/075,0,[0] 6 || [1] 3 || [2] 9 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"def func(x):
+    return x * 2
+print(func(3))
+What is the output?
+6
+3
+9
+None","The correct answer is: 6
+
+Explanation: 
+
+The function `func(x)` takes an input `x` and returns the result of multiplying `x` by 2. When we call `func(3)`, it multiplies 3 by 2, resulting in 6. Therefore, the output of the function is 6."
+mcq/076,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/077,0,[0] 2 || [1] 2.0 || [2] 3 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5//2)
+What would be the output of this Python code?
+2
+2.0
+3
+None","The correct answer is: 2
+
+Explanation: In Python 3, the `//` operator performs floor division, which returns the largest whole number that is less than or equal to the result of the division. So, `5//2` would be `2`."
+mcq/078,0,[0] 1 || [1] 2 || [2] 3 || [3] None,2,reader v2.0: 2 answer statement(s); used: 'the output of the code',,,"y = [1, 2, 3]
+print(y[-1])
+What is the output of this code?
+1
+2
+3
+None","The correct answer is: 3
+
+Explanation: 
+
+In Python, when you use `y[-1]`, it refers to the last element in the list `y`. In this case, the list `y` is `[1, 2, 3]`, so the last element is `3`. Therefore, the output of the code will be `3`."
+mcq/079,0,[0] 1 || [1] 2 || [2] 3 || [3] None,2,reader v2.0: 2 answer statement(s); used: 'the output of the code',,,"y = [1, 2, 3]
+print(y[-1])
+What is the output of this code?
+1
+2
+3
+None","The correct answer is: 3
+
+Explanation: 
+
+In Python, when you use `y[-1]`, it refers to the last element in the list `y`. In this case, the list `y` is `[1, 2, 3]`, so the last element is `3`. Therefore, the output of the code will be `3`."
+mcq/080,0,[0] 1 || [1] 2 || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = [1, 2, 3]
+print(x[0])
+What will be printed?
+1
+2
+None
+Error","The correct answer is: 1
+
+Explanation: 
+
+In Python, when you access an element in a list using its index, it returns the value at that index. In this case, `x[0]` refers to the first element in the list `x`, which is 1. Therefore, when you run `print(x[0])`, it will print 1."
+mcq/081,0,[0] 6 || [1] 3 || [2] 9 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"def func(x):
+    return x * 2
+print(func(3))
+What is the output?
+6
+3
+9
+None","The correct answer is: 6
+
+Explanation: 
+
+The function `func(x)` takes an input `x` and returns the result of multiplying `x` by 2. When we call `func(3)`, it multiplies 3 by 2, resulting in 6. Therefore, the output of the function is 6."
+mcq/082,0,[0] 2 || [1] 2.0 || [2] 3 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5//2)
+What would be the output of this Python code?
+2
+2.0
+3
+None","The correct answer is: 2
+
+Explanation: In Python 3, the `//` operator performs floor division, which returns the largest whole number that is less than or equal to the result of the division. So, `5//2` would be `2`."
+mcq/083,0,[0] 4 || [1] 5 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = ""hello""
+print(len(x))
+What will be printed?
+4
+5
+None
+Error","The correct answer is: 5
+
+Explanation: The `len()` function in Python returns the number of items in an object. In this case, the string ""hello"" has 5 characters: h, e, l, l, and o. Therefore, when you print `len(x)`, it will print 5."
+mcq/084,0,[0] 5 || [1] 3 || [2] 8 || [3] None,2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = 5
+x += 3
+print(x)
+What will be printed?
+5
+3
+8
+None","The correct answer is: 8
+
+Explanation: 
+
+In the given code, 'x' is initially assigned the value 5. Then, 'x' is incremented by 3 using the expression 'x += 3'. This is equivalent to writing 'x = x + 3'. So, 'x' becomes 5 + 3 = 8. Therefore, when 'print(x)' is executed, it will print 8."
+mcq/085,0,[0] 5 || [1] 3 || [2] 8 || [3] None,2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = 5
+x += 3
+print(x)
+What will be printed?
+5
+3
+8
+None","The correct answer is: 8
+
+Explanation: 
+
+In the given code, 'x' is assigned the value 5. Then, 'x' is incremented by 3 using the expression 'x += 3'. This is equivalent to writing 'x = x + 3'. So, 'x' becomes 5 + 3 = 8. Therefore, when 'print(x)' is executed, it will print 8."
+mcq/086,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/087,0,[0] 2 || [1] 2.0 || [2] 3 || [3] None,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5//2)
+What would be the output of this Python code?
+2
+2.0
+3
+None","The correct answer is: 2
+
+Explanation: In Python 3, the `//` operator performs floor division, which returns the largest whole number that is less than or equal to the result of the division. So, `5//2` would be `2`."
+mcq/088,0,[0] 4 || [1] 5 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = ""hello""
+print(len(x))
+What will be printed?
+4
+5
+None
+Error","The correct answer is: 5
+
+Explanation: The `len()` function in Python returns the number of items in an object. In this case, the string ""hello"" has 5 characters: h, e, l, l, and o. Therefore, when you print `len(x)`, it will output 5."
+mcq/089,0,[0] True || [1] False || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What will be printed?
+True
+False
+None
+Error","The correct answer is: True
+
+In Python, the `bool()` function returns `True` for any non-empty string, and `False` for an empty string. So, `bool("""")` will return `False`."
+mcq/090,0,[0] 1 || [1] 2 || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = [1, 2, 3]
+print(x[0])
+What will be printed?
+1
+2
+None
+Error","The correct answer is: 1
+
+Explanation: In Python, when you access an element in a list using its index, it returns the value at that index. In this case, `x[0]` refers to the first element in the list `x`, which is 1."
+mcq/091,0,[0] 5 || [1] 3 || [2] 8 || [3] None,2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = 5
+x += 3
+print(x)
+What will be printed?
+5
+3
+8
+None","The correct answer is: 8
+
+Explanation: 
+
+In the given code, 'x' is assigned the value 5. Then, 'x' is incremented by 3 using the expression 'x += 3'. This is equivalent to writing 'x = x + 3'. So, 'x' becomes 5 + 3 = 8. Therefore, when 'print(x)' is executed, it will print 8."
+mcq/092,0,[0] 5 || [1] 3 || [2] 8 || [3] None,2,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = 5
+x += 3
+print(x)
+What will be printed?
+5
+3
+8
+None","The correct answer is: 8
+
+Explanation: 
+
+In the given code, 'x' is assigned the value 5. Then, 'x' is incremented by 3 using the expression 'x += 3'. This is equivalent to writing 'x = x + 3'. So, 'x' becomes 5 + 3 = 8. Therefore, when 'print(x)' is executed, it will print 8."
+mcq/093,0,[0] True || [1] False || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What will be printed?
+True
+False
+None
+Error","The correct answer is: True
+
+In Python, the `bool()` function returns `True` for any non-empty string, and `False` for an empty string. So, `bool("""")` will return `False`."
+mcq/094,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/095,0,[0] True || [1] False || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(bool(""""))
+What will be printed?
+True
+False
+None
+Error","The correct answer is: True
+
+In Python, the `bool()` function returns `True` for any non-empty string, and `False` for an empty string. So, `bool("""")` will return `False`."
+mcq/096,0,[0] 1 || [1] 2 || [2] None || [3] Error,0,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"x = [1, 2, 3]
+print(x[0])
+What will be printed?
+1
+2
+None
+Error","The correct answer is: 1
+
+Explanation: In Python, when you access an element in a list using its index, it returns the value at that index. In this case, `x[0]` refers to the first element in the list `x`, which is 1."
+mcq/097,0,[0] 5 || [1] 5.0 || [2] None || [3] Error,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(float(5))
+What will be the output?
+5
+5.0
+None
+Error",The correct answer is: 5.0
+mcq/098,0,[0] 10 || [1] 25 || [2] 5 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5**2)
+What will be the output of this Python code?
+10
+25
+5
+None","The correct answer is: 25
+
+Explanation: In Python, the `**` operator is used for exponentiation. So, `5**2` means 5 to the power of 2, which equals 25."
+mcq/099,0,[0] 10 || [1] 25 || [2] 5 || [3] None,1,reader v2.0: 1 answer statement(s); used: 'correct answer',,,"print(5**2)
+What will be the output of this Python code?
+10
+25
+5
+None","The correct answer is: 25
+
+Explanation: In Python, the `**` operator is used for exponentiation. So, `5**2` means 5 to the power of 2, which equals 25."

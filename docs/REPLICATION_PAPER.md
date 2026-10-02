@@ -93,19 +93,21 @@ the results to the Mac (Mac terminal):
 rsync -av <netid>@hopper.orc.gmu.edu:/scratch/<netid>/cseprompts/results/evaluations/ ~/Desktop/CSEPROMPTS/results/evaluations/
 ```
 
-### Step 5. MCQs (Mac) — about 45 minutes
+### Step 5. MCQs (Mac) — automatic reading, with a spot-check
 
 ```bash
 .venv/bin/python scripts/mcq.py sheet --run results/generations/llama31_8b_instruct/greedy
+.venv/bin/python scripts/mcq.py autofill --run results/generations/llama31_8b_instruct/greedy
 ```
 
-Open `annotations/mcq/llama31_8b_instruct/greedy.csv` (Excel or VS Code). For each of the 100 rows:
-1. Read `response` and decide which option the model chose.
-2. Write its **number** in `chosen`. The `options` column lists them as `[0] … || [1] …`. If the model
-   picked several options, write e.g. `2, 5`; if it gave no answer, leave `chosen` empty.
-3. Set `checked` to `1`.
+`autofill` reads which option(s) each response chose with written rules (`docs/MANUAL_CLEANING.md`,
+"MCQ answers") and fills `auto_chosen` and `auto_note` in
+`annotations/mcq/llama31_8b_instruct/greedy.csv`. It never edits the responses: it refuses to save if
+`response`, `question`, `options`, `chosen` or `checked` would change.
 
-`auto_chosen` is only a suggestion, so check it. Then score:
+Spot-check (recommended, about 10 minutes): open the sheet, read the rows it lists as "found no
+option" and a few others. If you disagree with a row, write your option number(s) in `chosen` and set
+`checked` to `1`; checked rows override the automatic reading. Then score:
 
 ```bash
 .venv/bin/python scripts/mcq.py score --run results/generations/llama31_8b_instruct/greedy
