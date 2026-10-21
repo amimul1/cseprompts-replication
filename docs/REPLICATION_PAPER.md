@@ -7,16 +7,22 @@ in this procedure uses them.
 
 The commands use Llama (`llama31_8b_instruct`); for another model in `configs/models.json`, swap the key.
 
+**Dataset version.** The paper used release `58d7ea0` (2024-09-25). On 2026-10-11 the authors updated the
+dataset (`57275c2`, "fixed test case issues"), and the code now uses `57275c2` by default. `58d7ea0` is
+kept, unchanged and marked OUTDATED, only to reproduce the paper. **For every command in this procedure,
+first run `export CSE_RELEASE=58d7ea0`** (Mac and Hopper; `sbatch --export=ALL` passes it on). Runs made
+from the old release refuse to be graded against the new one, and the other way round.
+
 ## What the paper did, and how each step is reproduced
 
 | # | The paper (Raihan et al., JIIS 2025, §3–4) | This replication | Where |
 |---|---|---|---|
-| 1 | 219 coding prompts + 100 MCQs from the public release | The release, byte-identical to GitHub 58d7ea0 and the journal supplement | `data/raw/` (never edited) |
+| 1 | 219 coding prompts + 100 MCQs from the public release | The release, byte-identical to GitHub 58d7ea0 and the journal supplement (OUTDATED since 2026-10-11) | the 58d7ea0 folder in `data/raw/` (never edited) |
 | 2 | Prompt = system prompt + task + instruction (Fig. 1–2), zero-shot | Same strings, sent as system + user messages | `src/cseprompts/prompts.py` |
 | 3 | LLaMA-3, 8B, "3.1" | `meta-llama/Llama-3.1-8B-Instruct`, pinned commit | `configs/models.json` |
 | 4 | One answer per prompt ("first attempt") | One greedy answer, 2048 new tokens | `configs/protocols.json` (`greedy`) |
 | 5 | Responses "manually cleaned to isolate the code" | You clean every response by hand | `docs/MANUAL_CLEANING.md` |
-| 6 | Code run with pytest on the released test cases (≥5 per prompt) | The released prose tests, converted to pytest **with every released expected value kept**, errors included | `data/processed/pytest/original/` |
+| 6 | Code run with pytest on the released test cases (≥5 per prompt) | The released prose tests, converted to pytest **with every released expected value kept**, errors included | `data/processed/pytest_OUTDATED_58d7ea0/original/` |
 | 7 | Label 0–4 per response (Guidelines.csv); pass@1 = share with label 4 | Same labels and metric, plus a 95% CI | `scripts/evaluate.py` |
 | 8 | MCQ accuracy, labels 0/1/2, against the released keys | You record the option the model chose; graded against the released keys | `scripts/mcq.py` (release mode) |
 
@@ -28,7 +34,7 @@ released. Steps 5–6 are therefore the closest reconstruction, and the report s
 Hopper commands start, every login, with:
 
 ```bash
-cd ~/CSEPROMPTS && source hopper/env.sh && git pull
+cd ~/CSEPROMPTS && source hopper/env.sh && git pull && export CSE_RELEASE=58d7ea0
 ```
 
 ### Step 1. Generate (Hopper, GPU) — already done for Llama

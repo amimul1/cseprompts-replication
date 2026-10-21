@@ -32,7 +32,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from cseprompts import config, provenance  # noqa: E402
-from cseprompts.data import REPO_ROOT, load_coding, load_mcq  # noqa: E402
+from cseprompts.data import RELEASE, REPO_ROOT, load_coding, load_mcq  # noqa: E402
+from cseprompts.harness.runs import run_name  # noqa: E402
 from cseprompts.prompts import flatten, paper_messages, render  # noqa: E402
 
 SPLITS = ("codingsites", "academic", "mcq")
@@ -135,8 +136,7 @@ def main() -> None:
         revision = None if args.backend == "mock" else resolve_revision(hf_id, None)
         prompt_mode = args.prompt_mode or "auto"
 
-    run_name = args.protocol + (f"__limit{args.limit}" if args.limit else "")
-    run_dir = (args.out_dir or default_out_dir()) / key / run_name
+    run_dir = (args.out_dir or default_out_dir()) / key / run_name(args.protocol, args.limit)
     if (run_dir / "run_meta.json").exists() and not args.overwrite:
         raise SystemExit(f"{run_dir} already has a finished run; refusing to overwrite raw outputs (use --overwrite).")
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -168,6 +168,7 @@ def main() -> None:
     modes = Counter(p["prompt_mode"] for p in prompts)
     meta = {
         "model_key": key,
+        "dataset_release": RELEASE,
         "hf_id": hf_id,
         "revision": revision,
         "registry_entry": entry,

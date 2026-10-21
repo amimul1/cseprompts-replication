@@ -16,18 +16,19 @@ from __future__ import annotations
 import importlib.util
 import re
 
-from cseprompts.data import REPO_ROOT, load_mcq
+from cseprompts.data import RELEASE, REPO_ROOT, load_mcq
 
 
 CURATION = REPO_ROOT / "data" / "curation" / "mcq.py"
 
 
-def has_validated_keys() -> bool:
-    return CURATION.exists()  # a repo may ship only the release keys
+def has_validated_keys(release: str | None = None) -> bool:
+    # a repo may ship only the release keys; the checked keys were made for the OUTDATED release 58d7ea0
+    return CURATION.exists() and (release or RELEASE) == "58d7ea0"
 
 
-def _curation():
-    if not has_validated_keys():
+def _curation(release: str | None = None):
+    if not has_validated_keys(release):
         return {}, {}
     spec = importlib.util.spec_from_file_location("curation_mcq", CURATION)
     mod = importlib.util.module_from_spec(spec)
@@ -57,12 +58,12 @@ def release_accept(opts: list[str], key: str) -> list[int]:
     return sorted({i for p in parts for i, n in enumerate(names) if n == _match(p)})
 
 
-def items(mode: str) -> list[dict]:
-    if mode == "validated" and not has_validated_keys():
-        raise ValueError(f"validated MCQ keys need {CURATION}")
-    accept_fix, exclude = _curation()
+def items(mode: str, release: str | None = None) -> list[dict]:
+    if mode == "validated" and not has_validated_keys(release):
+        raise ValueError(f"validated MCQ keys need {CURATION} and the OUTDATED release (CSE_RELEASE=58d7ea0)")
+    accept_fix, exclude = _curation(release)
     out, seen = [], set()
-    for q in load_mcq():
+    for q in load_mcq(release):
         opts = options(q.prompt)
         accept = release_accept(opts, q.answer)
         if mode == "validated":

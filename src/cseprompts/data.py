@@ -1,4 +1,9 @@
-"""Load the original CSEPrompts 2.0 release (data/raw/CSEPrompts-main).
+"""Load a CSEPrompts 2.0 release (data/raw/).
+
+Two releases are kept, byte-identical to GitHub mraihan-gmu/CSEPrompts:
+  - 57275c2 (2026-10-11, "fixed test case issues"): the CURRENT release and the default.
+  - 58d7ea0 (2024-09-25): the original release used by the paper. OUTDATED; kept only to reproduce
+    results that were computed on it. Select it with the environment variable CSE_RELEASE=58d7ea0.
 
 The released ``*.json`` files are JSON Lines (one object per line), and the
 test cases are free text ("Test Case 1:\\nInput: ...\\nOutput: ...").  This
@@ -10,18 +15,41 @@ makes the tests executable yet; that is the job of the harness (next step).
 from __future__ import annotations
 
 import json
+import os
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-RAW_DIR = REPO_ROOT / "data" / "raw" / "CSEPrompts-main"
-
-CODING_SPLITS = {
-    "codingsites": RAW_DIR / "CodingSites" / "CodingSites.json",
-    "academic": RAW_DIR / "Academic" / "Academic.json",
+CURRENT_RELEASE = "57275c2"
+OUTDATED_RELEASES = ("58d7ea0",)
+# Folder names under data/raw/ (the first that exists is used).
+RELEASE_DIRS = {
+    "57275c2": ("CSEPrompts-57275c2",),
+    "58d7ea0": ("CSEPrompts-main", "OUTDATED_CSEPrompts-58d7ea0"),
 }
-MCQ_PATH = RAW_DIR / "MCQ" / "MCQ_Prompts.json"
+RELEASE = os.environ.get("CSE_RELEASE", CURRENT_RELEASE)
+if RELEASE not in RELEASE_DIRS:
+    raise ValueError(f"CSE_RELEASE={RELEASE!r}; choose one of {sorted(RELEASE_DIRS)}")
+
+
+def release_dir(release: str | None = None) -> Path:
+    names = RELEASE_DIRS[release or RELEASE]
+    for name in names:
+        d = REPO_ROOT / "data" / "raw" / name
+        if d.exists():
+            return d
+    return REPO_ROOT / "data" / "raw" / names[0]
+
+
+def release_paths(release: str | None = None) -> tuple[dict, Path]:
+    d = release_dir(release)
+    return ({"codingsites": d / "CodingSites" / "CodingSites.json", "academic": d / "Academic" / "Academic.json"},
+            d / "MCQ" / "MCQ_Prompts.json")
+
+
+RAW_DIR = release_dir()
+CODING_SPLITS, MCQ_PATH = release_paths()
 
 _CASE_SPLIT = re.compile(r"Test Case\s*\d+\s*:", re.IGNORECASE)
 _INPUT_LABEL = r"(?:Input|Function Call|Call)"
@@ -78,8 +106,8 @@ def parse_test_cases(text: str) -> list[TestCase]:
     return cases
 
 
-def load_coding(split: str) -> list[CodingPrompt]:
-    rows = _read_jsonl(CODING_SPLITS[split])
+def load_coding(split: str, release: str | None = None) -> list[CodingPrompt]:
+    rows = _read_jsonl(release_paths(release)[0][split])
     return [
         CodingPrompt(
             uid=f"{split}/{int(r['#']):03d}",
@@ -93,6 +121,6 @@ def load_coding(split: str) -> list[CodingPrompt]:
     ]
 
 
-def load_mcq() -> list[MCQ]:
-    rows = _read_jsonl(MCQ_PATH)
+def load_mcq(release: str | None = None) -> list[MCQ]:
+    rows = _read_jsonl(release_paths(release)[1])
     return [MCQ(f"mcq/{i:03d}", i, r["Prompt"], r["Answer"]) for i, r in enumerate(rows)]
